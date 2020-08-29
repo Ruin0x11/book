@@ -18,7 +18,7 @@ for 5 seconds before responding.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,no_run
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-10/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-10/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 20-10: Simulating a slow request by recognizing
@@ -99,7 +99,7 @@ new thread to handle each stream within the `for` loop.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,no_run
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-11/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-11/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 20-11: Spawning a new thread for each
@@ -122,7 +122,7 @@ struct we want to use instead of `thread::spawn`.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-12/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-12/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 20-12: Our ideal `ThreadPool` interface</span>
@@ -141,7 +141,7 @@ compiler errors from `cargo check` to drive our development. Here is the first
 error we get:
 
 ```console
-{{#include ../listings/ch20-web-server/listing-20-12/output.txt}}
+{{#include ./listings/ch20-web-server/listing-20-12/output.txt}}
 ```
 
 Great! This error tells us we need a `ThreadPool` type or module, so we’ll
@@ -158,7 +158,7 @@ definition of a `ThreadPool` struct that we can have for now:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch20-web-server/no-listing-01-define-threadpool-struct/src/lib.rs}}
+{{#rustdoc_include ./listings/ch20-web-server/no-listing-01-define-threadpool-struct/src/lib.rs}}
 ```
 
 Then create a new directory, *src/bin*, and move the binary crate rooted in
@@ -171,14 +171,14 @@ following code to the top of *src/bin/main.rs*:
 <span class="filename">Filename: src/bin/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch20-web-server/no-listing-01-define-threadpool-struct/src/bin/main.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/no-listing-01-define-threadpool-struct/src/bin/main.rs:here}}
 ```
 
 This code still won’t work, but let’s check it again to get the next error that
 we need to address:
 
 ```console
-{{#include ../listings/ch20-web-server/no-listing-01-define-threadpool-struct/output.txt}}
+{{#include ./listings/ch20-web-server/no-listing-01-define-threadpool-struct/output.txt}}
 ```
 
 This error indicates that next we need to create an associated function named
@@ -190,7 +190,7 @@ characteristics:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch20-web-server/no-listing-02-impl-threadpool-new/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/no-listing-02-impl-threadpool-new/src/lib.rs:here}}
 ```
 
 We chose `usize` as the type of the `size` parameter, because we know that a
@@ -202,7 +202,7 @@ ignore --> section of Chapter 3.
 Let’s check the code again:
 
 ```console
-{{#include ../listings/ch20-web-server/no-listing-02-impl-threadpool-new/output.txt}}
+{{#include ./listings/ch20-web-server/no-listing-02-impl-threadpool-new/output.txt}}
 ```
 
 Now the error occurs because we don’t have an `execute` method on `ThreadPool`.
@@ -247,7 +247,7 @@ the thread will take to execute. Let’s create an `execute` method on
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch20-web-server/no-listing-03-define-execute/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/no-listing-03-define-execute/src/lib.rs:here}}
 ```
 
 We still use the `()` after `FnOnce` because this `FnOnce` represents a closure
@@ -259,7 +259,7 @@ Again, this is the simplest implementation of the `execute` method: it does
 nothing, but we’re trying only to make our code compile. Let’s check it again:
 
 ```console
-{{#include ../listings/ch20-web-server/no-listing-03-define-execute/output.txt}}
+{{#include ./listings/ch20-web-server/no-listing-03-define-execute/output.txt}}
 ```
 
 It compiles! But note that if you try `cargo run` and make a request in the
@@ -288,7 +288,7 @@ zero by using the `assert!` macro, as shown in Listing 20-13.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-13/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-13/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 20-13: Implementing `ThreadPool::new` to panic if
@@ -339,7 +339,7 @@ returned a `ThreadPool` instance containing them.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore,not_desired_behavior
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-14/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-14/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 20-14: Creating a vector for `ThreadPool` to hold
@@ -405,7 +405,7 @@ Ready? Here is Listing 20-15 with one way to make the preceding modifications.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-15/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-15/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 20-15: Modifying `ThreadPool` to hold `Worker`
@@ -460,7 +460,7 @@ the channel.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-16/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-16/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 20-16: Modifying `ThreadPool` to store the
@@ -477,7 +477,7 @@ the closure. The code in Listing 20-17 won’t quite compile yet.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-17/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-17/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 20-17: Passing the receiving end of the channel
@@ -489,7 +489,7 @@ the channel into `Worker::new`, and then we use it inside the closure.
 When we try to check this code, we get this error:
 
 ```console
-{{#include ../listings/ch20-web-server/listing-20-17/output.txt}}
+{{#include ./listings/ch20-web-server/listing-20-17/output.txt}}
 ```
 
 The code is trying to pass `receiver` to multiple `Worker` instances. This
@@ -512,7 +512,7 @@ receiver at a time. Listing 20-18 shows the changes we need to make.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-18/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-18/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 20-18: Sharing the receiving end of the channel
@@ -536,7 +536,7 @@ at Listing 20-19.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-19/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-19/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 20-19: Creating a `Job` type alias for a `Box`
@@ -560,7 +560,7 @@ shown in Listing 20-20 to `Worker::new`.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-20/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-20/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 20-20: Receiving and executing the jobs in the
@@ -647,7 +647,7 @@ why we didn’t write the worker thread code as shown in Listing 20-21.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore,not_desired_behavior
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-21/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-21/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 20-21: An alternative implementation of

@@ -35,7 +35,7 @@ because we haven’t implemented the `blog` crate yet.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch17-oop/listing-17-11/src/main.rs:all}}
+{{#rustdoc_include ./listings/ch17-oop/listing-17-11/src/main.rs:all}}
 ```
 
 <span class="caption">Listing 17-11: Code that demonstrates the desired
@@ -76,7 +76,7 @@ inside an `Option<T>` in a private field named `state`. You’ll see why the
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch17-oop/listing-17-12/src/lib.rs}}
+{{#rustdoc_include ./listings/ch17-oop/listing-17-12/src/lib.rs}}
 ```
 
 <span class="caption">Listing 17-12: Definition of a `Post` struct and a `new`
@@ -108,7 +108,7 @@ Post` block:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch17-oop/listing-17-13/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch17-oop/listing-17-13/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 17-13: Implementing the `add_text` method to add
@@ -136,7 +136,7 @@ be empty. Listing 17-14 shows this placeholder implementation:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch17-oop/listing-17-14/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch17-oop/listing-17-14/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 17-14: Adding a placeholder implementation for
@@ -153,7 +153,7 @@ change its state from `Draft` to `PendingReview`. Listing 17-15 shows this code:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch17-oop/listing-17-15/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch17-oop/listing-17-15/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 17-15: Implementing `request_review` methods on
@@ -210,7 +210,7 @@ state is approved, as shown in Listing 17-16:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch17-oop/listing-17-16/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch17-oop/listing-17-16/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 17-16: Implementing the `approve` method on
@@ -233,7 +233,7 @@ otherwise, we want to return an empty string slice, as shown in Listing 17-17:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch17-oop/listing-17-17/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch17-oop/listing-17-17/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 17-17: Updating the `content` method on `Post` to
@@ -268,7 +268,7 @@ Listing 17-18:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch17-oop/listing-17-18/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch17-oop/listing-17-18/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 17-18: Adding the `content` method to the `State`
@@ -360,7 +360,7 @@ Let’s consider the first part of `main` in Listing 17-11:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch17-oop/listing-17-11/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch17-oop/listing-17-11/src/main.rs:here}}
 ```
 
 We still enable the creation of new posts in the draft state using `Post::new`
@@ -376,7 +376,7 @@ as well as methods on each:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch17-oop/listing-17-19/src/lib.rs}}
+{{#rustdoc_include ./listings/ch17-oop/listing-17-19/src/lib.rs}}
 ```
 
 <span class="caption">Listing 17-19: A `Post` with a `content` method and a
@@ -412,7 +412,7 @@ shown in Listing 17-20:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch17-oop/listing-17-20/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch17-oop/listing-17-20/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 17-20: A `PendingReviewPost` that gets created by
@@ -442,7 +442,7 @@ The updated code in `main` is shown in Listing 17-21:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch17-oop/listing-17-21/src/main.rs}}
+{{#rustdoc_include ./listings/ch17-oop/listing-17-21/src/main.rs}}
 ```
 
 <span class="caption">Listing 17-21: Modifications to `main` to use the new

@@ -30,7 +30,7 @@ need a summary from each type, and we need to request that summary by calling a
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-12/src/lib.rs}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-12/src/lib.rs}}
 ```
 
 <span class="caption">Listing 10-12: A `Summary` trait that consists of the
@@ -63,7 +63,7 @@ already limited to 280 characters.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-13/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-13/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 10-13: Implementing the `Summary` trait on the
@@ -82,7 +82,7 @@ After implementing the trait, we can call the methods on instances of
 `NewsArticle` and `Tweet` in the same way we call regular methods, like this:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-01-calling-trait-method/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/no-listing-01-calling-trait-method/src/main.rs:here}}
 ```
 
 This code prints `1 new tweet: horse_ebooks: of course, as you probably already
@@ -131,7 +131,7 @@ in Listing 10-12.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-14/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-14/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 10-14: Definition of a `Summary` trait with a
@@ -147,7 +147,7 @@ directly, we’ve provided a default implementation and specified that
 the `summarize` method on an instance of `NewsArticle`, like this:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-02-calling-default-impl/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/no-listing-02-calling-default-impl/src/main.rs:here}}
 ```
 
 This code prints `New article available! (Read more...)`.
@@ -167,14 +167,14 @@ a small part of it. For example, we could define the `Summary` trait to have a
 `summarize_author` method:
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-03-default-impl-calls-other-methods/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/no-listing-03-default-impl-calls-other-methods/src/lib.rs:here}}
 ```
 
 To use this version of `Summary`, we only need to define `summarize_author`
 when we implement the trait on a type:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-03-default-impl-calls-other-methods/src/lib.rs:impl}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/no-listing-03-default-impl-calls-other-methods/src/lib.rs:impl}}
 ```
 
 After we define `summarize_author`, we can call `summarize` on instances of the
@@ -184,7 +184,7 @@ definition of `summarize_author` that we’ve provided. Because we’ve implemen
 `summarize` method without requiring us to write any more code.
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-03-default-impl-calls-other-methods/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/no-listing-03-default-impl-calls-other-methods/src/main.rs:here}}
 ```
 
 This code prints `1 new tweet: (Read more from @horse_ebooks...)`.
@@ -204,7 +204,7 @@ implements the `Summary` trait. To do this, we can use the `impl Trait`
 syntax, like this:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-04-traits-as-parameters/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/no-listing-04-traits-as-parameters/src/lib.rs:here}}
 ```
 
 Instead of a concrete type for the `item` parameter, we specify the `impl`
@@ -305,7 +305,7 @@ We can also use the `impl Trait` syntax in the return position to return a
 value of some type that implements a trait, as shown here:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-05-returning-impl-trait/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/no-listing-05-returning-impl-trait/src/lib.rs:here}}
 ```
 
 By using `impl Summary` for the return type, we specify that the
@@ -325,7 +325,7 @@ example, this code that returns either a `NewsArticle` or a `Tweet` with the
 return type specified as `impl Summary` wouldn’t work:
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-06-impl-trait-returns-one-type/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/no-listing-06-impl-trait-returns-one-type/src/lib.rs:here}}
 ```
 
 Returning either a `NewsArticle` or a `Tweet` isn’t allowed due to restrictions
@@ -343,7 +343,7 @@ the `largest` function that uses a generic type parameter! Last time we tried
 to run that code, we received this error:
 
 ```text
-{{#include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-05/output.txt}}
+{{#include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-05/output.txt}}
 ```
 
 In the body of `largest` we wanted to compare two values of type `T` using the
@@ -355,13 +355,13 @@ into scope because it’s in the prelude. Change the signature of `largest` to
 look like this:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-07-fixing-listing-10-05/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/no-listing-07-fixing-listing-10-05/src/main.rs:here}}
 ```
 
 This time when we compile the code, we get a different set of errors:
 
 ```console
-{{#include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-07-fixing-listing-10-05/output.txt}}
+{{#include ./listings/ch10-generic-types-traits-and-lifetimes/no-listing-07-fixing-listing-10-05/output.txt}}
 ```
 
 The key line in this error is `cannot move out of type [T], a non-copy slice`.
@@ -384,7 +384,7 @@ values in the slice that we pass into the function implement the `PartialOrd`
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-15/src/main.rs}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-15/src/main.rs}}
 ```
 
 <span class="caption">Listing 10-15: A working definition of the `largest`
@@ -417,7 +417,7 @@ the `Display` trait that enables printing.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-16/src/lib.rs}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-16/src/lib.rs}}
 ```
 
 <span class="caption">Listing 10-16: Conditionally implement methods on a

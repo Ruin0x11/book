@@ -57,7 +57,7 @@ instead.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-24/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-24/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 12-24: Writing error messages to standard error

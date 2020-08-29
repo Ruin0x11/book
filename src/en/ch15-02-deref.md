@@ -29,7 +29,7 @@ reference to the data:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-06/src/main.rs}}
+{{#rustdoc_include ./listings/ch15-smart-pointers/listing-15-06/src/main.rs}}
 ```
 
 <span class="caption">Listing 15-6: Using the dereference operator to follow a
@@ -46,7 +46,7 @@ If we tried to write `assert_eq!(5, y);` instead, we would get this compilation
 error:
 
 ```console
-{{#include ../listings/ch15-smart-pointers/output-only-01-comparing-to-reference/output.txt}}
+{{#include ./listings/ch15-smart-pointers/output-only-01-comparing-to-reference/output.txt}}
 ```
 
 Comparing a number and a reference to a number isn’t allowed because they’re
@@ -61,7 +61,7 @@ reference; the dereference operator will work as shown in Listing 15-7:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-07/src/main.rs}}
+{{#rustdoc_include ./listings/ch15-smart-pointers/listing-15-07/src/main.rs}}
 ```
 
 <span class="caption">Listing 15-7: Using the dereference operator on a
@@ -88,7 +88,7 @@ Listing 15-8 defines a `MyBox<T>` type in the same way. We’ll also define a
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-08/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch15-smart-pointers/listing-15-08/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 15-8: Defining a `MyBox<T>` type</span>
@@ -106,7 +106,7 @@ code in Listing 15-9 won’t compile because Rust doesn’t know how to derefere
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-09/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch15-smart-pointers/listing-15-09/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 15-9: Attempting to use `MyBox<T>` in the same
@@ -115,7 +115,7 @@ way we used references and `Box<T>`</span>
 Here’s the resulting compilation error:
 
 ```console
-{{#include ../listings/ch15-smart-pointers/listing-15-09/output.txt}}
+{{#include ./listings/ch15-smart-pointers/listing-15-09/output.txt}}
 ```
 
 Our `MyBox<T>` type can’t be dereferenced because we haven’t implemented that
@@ -133,7 +133,7 @@ contains an implementation of `Deref` to add to the definition of `MyBox`:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-10/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch15-smart-pointers/listing-15-10/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 15-10: Implementing `Deref` on `MyBox<T>`</span>
@@ -204,7 +204,7 @@ parameter:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-11/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch15-smart-pointers/listing-15-11/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 15-11: A `hello` function that has the parameter
@@ -217,7 +217,7 @@ with a reference to a value of type `MyBox<String>`, as shown in Listing 15-12:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-12/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch15-smart-pointers/listing-15-12/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 15-12: Calling `hello` with a reference to a
@@ -238,7 +238,7 @@ of type `&MyBox<String>`.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-13/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch15-smart-pointers/listing-15-13/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 15-13: The code we would have to write if Rust

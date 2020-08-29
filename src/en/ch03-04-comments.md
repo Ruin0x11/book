@@ -26,7 +26,7 @@ Comments can also be placed at the end of lines containing code:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-24-comments-end-of-line/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-24-comments-end-of-line/src/main.rs}}
 ```
 
 But you’ll more often see them used in this format, with the comment on a
@@ -35,7 +35,7 @@ separate line above the code it’s annotating:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-25-comments-above-line/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-25-comments-above-line/src/main.rs}}
 ```
 
 Rust also has another kind of comment, documentation comments, which we’ll

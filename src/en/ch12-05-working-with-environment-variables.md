@@ -19,7 +19,7 @@ tests, as shown in Listing 12-20.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-20/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-20/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 12-20: Adding a new failing test for the
@@ -51,7 +51,7 @@ they’ll be the same case when we check whether the line contains the query.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-21/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-21/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 12-21: Defining the `search_case_insensitive`
@@ -81,7 +81,7 @@ query is.
 Let’s see if this implementation passes the tests:
 
 ```console
-{{#include ../listings/ch12-an-io-project/listing-12-21/output.txt}}
+{{#include ./listings/ch12-an-io-project/listing-12-21/output.txt}}
 ```
 
 Great! They passed. Now, let’s call the new `search_case_insensitive` function
@@ -93,7 +93,7 @@ this field anywhere yet:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-22/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-22/src/lib.rs:here}}
 ```
 
 Note that we added the `case_sensitive` field that holds a Boolean. Next, we
@@ -105,7 +105,7 @@ won’t compile yet.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-22/src/lib.rs:there}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-22/src/lib.rs:there}}
 ```
 
 <span class="caption">Listing 12-22: Calling either `search` or
@@ -121,7 +121,7 @@ in Listing 12-23.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-23/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-23/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 12-23: Checking for an environment variable named
@@ -151,7 +151,7 @@ variable set and with the query `to`, which should match any line that contains
 the word “to” in all lowercase:
 
 ```console
-{{#include ../listings/ch12-an-io-project/listing-12-23/output.txt}}
+{{#include ./listings/ch12-an-io-project/listing-12-23/output.txt}}
 ```
 
 Looks like that still works! Now, let’s run the program with `CASE_INSENSITIVE`

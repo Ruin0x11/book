@@ -48,7 +48,7 @@ as well, starting with the `new` function to create a string, shown in Listing
 8-11.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-11/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-11/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-11: Creating a new, empty `String`</span>
@@ -60,7 +60,7 @@ that implements the `Display` trait, as string literals do. Listing 8-12 shows
 two examples.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-12/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-12/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-12: Using the `to_string` method to create a
@@ -73,7 +73,7 @@ literal. The code in Listing 8-13 is equivalent to the code from Listing 8-12
 that uses `to_string`.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-13/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-13/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-13: Using the `String::from` function to create
@@ -88,7 +88,7 @@ Remember that strings are UTF-8 encoded, so we can include any properly encoded
 data in them, as shown in Listing 8-14.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-14/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-14/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-14: Storing greetings in different languages in
@@ -108,7 +108,7 @@ We can grow a `String` by using the `push_str` method to append a string slice,
 as shown in Listing 8-15.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-15/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-15/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-15: Appending a string slice to a `String`
@@ -120,7 +120,7 @@ parameter. For example, the code in Listing 8-16 shows that it would be
 unfortunate if we weren’t able to use `s2` after appending its contents to `s1`.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-16/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-16/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-16: Using a string slice after appending its
@@ -134,7 +134,7 @@ The `push` method takes a single character as a parameter and adds it to the
 the `push` method.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-17/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-17/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-17: Adding one character to a `String` value
@@ -148,7 +148,7 @@ Often, you’ll want to combine two existing strings. One way is to use the `+`
 operator, as shown in Listing 8-18.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-18/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-18/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-18: Using the `+` operator to combine two
@@ -197,7 +197,7 @@ If we need to concatenate multiple strings, the behavior of the `+` operator
 gets unwieldy:
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/no-listing-01-concat-multiple-strings/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/no-listing-01-concat-multiple-strings/src/main.rs:here}}
 ```
 
 At this point, `s` will be `tic-tac-toe`. With all of the `+` and `"`
@@ -205,7 +205,7 @@ characters, it’s difficult to see what’s going on. For more complicated stri
 combining, we can use the `format!` macro:
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/no-listing-02-format/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/no-listing-02-format/src/main.rs:here}}
 ```
 
 This code also sets `s` to `tic-tac-toe`. The `format!` macro works in the same
@@ -221,7 +221,7 @@ if you try to access parts of a `String` using indexing syntax in Rust, you’ll
 get an error. Consider the invalid code in Listing 8-19.
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-19/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-19/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-19: Attempting to use indexing syntax with a
@@ -230,7 +230,7 @@ String</span>
 This code will result in the following error:
 
 ```console
-{{#include ../listings/ch08-common-collections/listing-08-19/output.txt}}
+{{#include ./listings/ch08-common-collections/listing-08-19/output.txt}}
 ```
 
 The error and the note tell the story: Rust strings don’t support indexing. But
@@ -243,7 +243,7 @@ A `String` is a wrapper over a `Vec<u8>`. Let’s look at some of our properly
 encoded UTF-8 example strings from Listing 8-14. First, this one:
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-14/src/main.rs:spanish}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-14/src/main.rs:spanish}}
 ```
 
 In this case, `len` will be 4, which means the vector storing the string “Hola”
@@ -252,7 +252,7 @@ what about the following line? (Note that this string begins with the capital
 Cyrillic letter Ze, not the Arabic number 3.)
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-14/src/main.rs:russian}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-14/src/main.rs:russian}}
 ```
 
 Asked how long the string is, you might say 12. However, Rust’s answer is 24:
@@ -343,7 +343,7 @@ What would happen if we used `&hello[0..1]`? The answer: Rust would panic at
 runtime in the same way as if an invalid index were accessed in a vector:
 
 ```console
-{{#include ../listings/ch08-common-collections/output-only-01-not-char-boundary/output.txt}}
+{{#include ./listings/ch08-common-collections/output-only-01-not-char-boundary/output.txt}}
 ```
 
 You should use ranges to create string slices with caution, because doing so

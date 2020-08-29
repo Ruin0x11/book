@@ -31,7 +31,7 @@ Look at the generated *Cargo.toml* file:
 <span class="filename">Filename: Cargo.toml</span>
 
 ```toml
-{{#include ../listings/ch02-guessing-game-tutorial/no-listing-01-cargo-new/Cargo.toml}}
+{{#include ./listings/ch02-guessing-game-tutorial/no-listing-01-cargo-new/Cargo.toml}}
 ```
 
 If the author information that Cargo obtained from your environment is not
@@ -43,14 +43,14 @@ you. Check out the *src/main.rs* file:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch02-guessing-game-tutorial/no-listing-01-cargo-new/src/main.rs}}
+{{#rustdoc_include ./listings/ch02-guessing-game-tutorial/no-listing-01-cargo-new/src/main.rs}}
 ```
 
 Now let’s compile this “Hello, world!” program and run it in the same step
 using the `cargo run` command:
 
 ```console
-{{#include ../listings/ch02-guessing-game-tutorial/no-listing-01-cargo-new/output.txt}}
+{{#include ./listings/ch02-guessing-game-tutorial/no-listing-01-cargo-new/output.txt}}
 ```
 
 The `run` command comes in handy when you need to rapidly iterate on a project,
@@ -69,7 +69,7 @@ allow the player to input a guess. Enter the code in Listing 2-1 into
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:all}}
+{{#rustdoc_include ./listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:all}}
 ```
 
 <span class="caption">Listing 2-1: Code that gets a guess from the user and
@@ -81,7 +81,7 @@ obtain user input and then print the result as output, we need to bring the
 standard library (which is known as `std`):
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:io}}
+{{#rustdoc_include ./listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:io}}
 ```
 
 By default, Rust brings only a few types into the scope of every program in
@@ -96,7 +96,7 @@ As you saw in Chapter 1, the `main` function is the entry point into the
 program:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:main}}
+{{#rustdoc_include ./listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:main}}
 ```
 
 The `fn` syntax declares a new function, the parentheses, `()`, indicate there
@@ -106,7 +106,7 @@ As you also learned in Chapter 1, `println!` is a macro that prints a string to
 the screen:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:print}}
+{{#rustdoc_include ./listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:print}}
 ```
 
 This code is printing a prompt stating what the game is and requesting input
@@ -117,7 +117,7 @@ from the user.
 Next, we’ll create a place to store the user input, like this:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:string}}
+{{#rustdoc_include ./listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:string}}
 ```
 
 Now the program is getting interesting! There’s a lot going on in this little
@@ -170,7 +170,7 @@ library with `use std::io;` on the first line of the program. Now we’ll call
 the `stdin` function from the `io` module:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:read}}
+{{#rustdoc_include ./listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:read}}
 ```
 
 If we hadn’t put the `use std::io` line at the beginning of the program, we
@@ -209,7 +209,7 @@ line of text, it’s still part of a single logical line of code. The next part
 is this method:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:expect}}
+{{#rustdoc_include ./listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:expect}}
 ```
 
 When you call a method with the `.foo()` syntax, it’s often wise to introduce a
@@ -261,7 +261,7 @@ entered into standard input.
 If you don’t call `expect`, the program will compile, but you’ll get a warning:
 
 ```console
-{{#include ../listings/ch02-guessing-game-tutorial/no-listing-02-without-expect/output.txt}}
+{{#include ./listings/ch02-guessing-game-tutorial/no-listing-02-without-expect/output.txt}}
 ```
 
 Rust warns that you haven’t used the `Result` value returned from `read_line`,
@@ -277,7 +277,7 @@ Aside from the closing curly bracket, there’s only one more line to discuss in
 the code added so far, which is the following:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:print_guess}}
+{{#rustdoc_include ./listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:print_guess}}
 ```
 
 This line prints the string we saved the user’s input in. The set of curly
@@ -352,7 +352,7 @@ you:
 <span class="filename">Filename: Cargo.toml</span>
 
 ```toml
-{{#include ../listings/ch02-guessing-game-tutorial/listing-02-02/Cargo.toml:9:}}
+{{#include ./listings/ch02-guessing-game-tutorial/listing-02-02/Cargo.toml:9:}}
 ```
 
 In the *Cargo.toml* file, everything that follows a header is part of a section
@@ -512,7 +512,7 @@ Now that you’ve added the `rand` crate to *Cargo.toml*, let’s start using
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-03/src/main.rs:all}}
+{{#rustdoc_include ./listings/ch02-guessing-game-tutorial/listing-02-03/src/main.rs:all}}
 ```
 
 <span class="caption">Listing 2-3: Adding code to generate a random
@@ -588,7 +588,7 @@ will explain.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-04/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch02-guessing-game-tutorial/listing-02-04/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 2-4: Handling the possible return values of
@@ -634,7 +634,7 @@ expression ends because it has no need to look at the last arm in this scenario.
 However, the code in Listing 2-4 won’t compile yet. Let’s try it:
 
 ```console
-{{#include ../listings/ch02-guessing-game-tutorial/listing-02-04/output.txt}}
+{{#include ./listings/ch02-guessing-game-tutorial/listing-02-04/output.txt}}
 ```
 
 The core of the error states that there are *mismatched types*. Rust has a
@@ -655,7 +655,7 @@ do that by adding another line to the `main` function body:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch02-guessing-game-tutorial/no-listing-03-convert-string-to-number/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch02-guessing-game-tutorial/no-listing-03-convert-string-to-number/src/main.rs:here}}
 ```
 
 The line is:
@@ -746,7 +746,7 @@ more chances at guessing the number:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch02-guessing-game-tutorial/no-listing-04-looping/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch02-guessing-game-tutorial/no-listing-04-looping/src/main.rs:here}}
 ```
 
 As you can see, we’ve moved everything into a loop from the guess input prompt
@@ -807,7 +807,7 @@ Let’s program the game to quit when the user wins by adding a `break` statemen
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch02-guessing-game-tutorial/no-listing-05-quitting/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch02-guessing-game-tutorial/no-listing-05-quitting/src/main.rs:here}}
 ```
 
 Adding the `break` line after `You win!` makes the program exit the loop when
@@ -824,7 +824,7 @@ is converted from a `String` to a `u32`, as shown in Listing 2-5.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-05/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch02-guessing-game-tutorial/listing-02-05/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 2-5: Ignoring a non-number guess and asking for
@@ -893,7 +893,7 @@ secret number. Listing 2-6 shows the final code.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-06/src/main.rs}}
+{{#rustdoc_include ./listings/ch02-guessing-game-tutorial/listing-02-06/src/main.rs}}
 ```
 
 <span class="caption">Listing 2-6: Complete guessing game code</span>

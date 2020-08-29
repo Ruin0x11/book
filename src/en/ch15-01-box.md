@@ -38,7 +38,7 @@ Listing 15-1 shows how to use a box to store an `i32` value on the heap:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-01/src/main.rs}}
+{{#rustdoc_include ./listings/ch15-smart-pointers/listing-15-01/src/main.rs}}
 ```
 
 <span class="caption">Listing 15-1: Storing an `i32` value on the heap using a
@@ -106,7 +106,7 @@ we’ll demonstrate.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-02/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch15-smart-pointers/listing-15-02/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 15-2: The first attempt at defining an enum to
@@ -123,7 +123,7 @@ Listing 15-3:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-03/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch15-smart-pointers/listing-15-03/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 15-3: Using the `List` enum to store the list `1,
@@ -138,7 +138,7 @@ If we try to compile the code in Listing 15-3, we get the error shown in
 Listing 15-4:
 
 ```console
-{{#include ../listings/ch15-smart-pointers/listing-15-03/output.txt}}
+{{#include ./listings/ch15-smart-pointers/listing-15-03/output.txt}}
 ```
 
 <span class="caption">Listing 15-4: The error we get when attempting to define
@@ -157,7 +157,7 @@ Recall the `Message` enum we defined in Listing 6-2 when we discussed enum
 definitions in Chapter 6:
 
 ```rust
-{{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-02/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch06-enums-and-pattern-matching/listing-06-02/src/main.rs:here}}
 ```
 
 To determine how much space to allocate for a `Message` value, Rust goes
@@ -214,7 +214,7 @@ of the `List` in Listing 15-3 to the code in Listing 15-5, which will compile:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-05/src/main.rs}}
+{{#rustdoc_include ./listings/ch15-smart-pointers/listing-15-05/src/main.rs}}
 ```
 
 <span class="caption">Listing 15-5: Definition of `List` that uses `Box<T>` in

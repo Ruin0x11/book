@@ -12,7 +12,7 @@ Here’s a program that contains an example function definition:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-16-functions/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-16-functions/src/main.rs}}
 ```
 
 Function definitions in Rust start with `fn` and have a set of parentheses
@@ -31,7 +31,7 @@ further. Place the `another_function` example in *src/main.rs* and run it. You
 should see the following output:
 
 ```console
-{{#include ../listings/ch03-common-programming-concepts/no-listing-16-functions/output.txt}}
+{{#include ./listings/ch03-common-programming-concepts/no-listing-16-functions/output.txt}}
 ```
 
 The lines execute in the order in which they appear in the `main` function.
@@ -54,13 +54,13 @@ look like in Rust:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-17-functions-with-parameters/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-17-functions-with-parameters/src/main.rs}}
 ```
 
 Try running this program; you should get the following output:
 
 ```console
-{{#include ../listings/ch03-common-programming-concepts/no-listing-17-functions-with-parameters/output.txt}}
+{{#include ./listings/ch03-common-programming-concepts/no-listing-17-functions-with-parameters/output.txt}}
 ```
 
 The declaration of `another_function` has one parameter named `x`. The type of
@@ -79,7 +79,7 @@ declarations with commas, like this:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-18-functions-with-multiple-parameters/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-18-functions-with-multiple-parameters/src/main.rs}}
 ```
 
 This example creates a function with two parameters, both of which are `i32`
@@ -92,7 +92,7 @@ project’s *src/main.rs* file with the preceding example and run it using `carg
 run`:
 
 ```console
-{{#include ../listings/ch03-common-programming-concepts/no-listing-18-functions-with-multiple-parameters/output.txt}}
+{{#include ./listings/ch03-common-programming-concepts/no-listing-18-functions-with-multiple-parameters/output.txt}}
 ```
 
 Because we called the function with `5` as the value for  `x` and `6` is passed
@@ -118,7 +118,7 @@ statement. In Listing 3-1, `let y = 6;` is a statement.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/listing-03-01/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/listing-03-01/src/main.rs}}
 ```
 
 <span class="caption">Listing 3-1: A `main` function declaration containing one statement</span>
@@ -132,13 +132,13 @@ to another variable, as the following code tries to do; you’ll get an error:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-19-statements-vs-expressions/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-19-statements-vs-expressions/src/main.rs}}
 ```
 
 When you run this program, the error you’ll get looks like this:
 
 ```console
-{{#include ../listings/ch03-common-programming-concepts/no-listing-19-statements-vs-expressions/output.txt}}
+{{#include ./listings/ch03-common-programming-concepts/no-listing-19-statements-vs-expressions/output.txt}}
 ```
 
 The `let y = 6` statement does not return a value, so there isn’t anything for
@@ -158,7 +158,7 @@ new scopes, `{}`, is an expression, for example:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-20-blocks-are-expressions/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-20-blocks-are-expressions/src/main.rs}}
 ```
 
 This expression:
@@ -190,7 +190,7 @@ value:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-21-function-return-values/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-21-function-return-values/src/main.rs}}
 ```
 
 There are no function calls, macros, or even `let` statements in the `five`
@@ -199,7 +199,7 @@ Rust. Note that the function’s return type is specified too, as `-> i32`. Try
 running this code; the output should look like this:
 
 ```console
-{{#include ../listings/ch03-common-programming-concepts/no-listing-21-function-return-values/output.txt}}
+{{#include ./listings/ch03-common-programming-concepts/no-listing-21-function-return-values/output.txt}}
 ```
 
 The `5` in `five` is the function’s return value, which is why the return type
@@ -221,7 +221,7 @@ Let’s look at another example:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-22-function-parameter-and-return/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-22-function-parameter-and-return/src/main.rs}}
 ```
 
 Running this code will print `The value of x is: 6`. But if we place a
@@ -231,13 +231,13 @@ expression to a statement, we’ll get an error.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-23-statements-dont-return-values/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-23-statements-dont-return-values/src/main.rs}}
 ```
 
 Compiling this code produces an error, as follows:
 
 ```console
-{{#include ../listings/ch03-common-programming-concepts/no-listing-23-statements-dont-return-values/output.txt}}
+{{#include ./listings/ch03-common-programming-concepts/no-listing-23-statements-dont-return-values/output.txt}}
 ```
 
 The main error message, “mismatched types,” reveals the core issue with this

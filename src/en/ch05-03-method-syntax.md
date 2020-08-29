@@ -17,7 +17,7 @@ in Listing 5-13.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-13/src/main.rs}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/listing-05-13/src/main.rs}}
 ```
 
 <span class="caption">Listing 5-13: Defining an `area` method on the
@@ -112,7 +112,7 @@ method.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-14/src/main.rs}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/listing-05-14/src/main.rs}}
 ```
 
 <span class="caption">Listing 5-14: Using the as-yet-unwritten `can_hold`
@@ -144,7 +144,7 @@ Listing 5-13, shown in Listing 5-15.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-15/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/listing-05-15/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 5-15: Implementing the `can_hold` method on
@@ -173,7 +173,7 @@ specify the same value twice:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/no-listing-03-associated-functions/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/no-listing-03-associated-functions/src/main.rs:here}}
 ```
 
 To call this associated function, we use the `::` syntax with the struct name;
@@ -188,7 +188,7 @@ Each struct is allowed to have multiple `impl` blocks. For example, Listing
 in its own `impl` block.
 
 ```rust
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-16/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/listing-05-16/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 5-16: Rewriting Listing 5-15 using multiple `impl`

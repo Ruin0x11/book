@@ -17,14 +17,14 @@ code with the following code that won’t compile just yet:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-01-variables-are-immutable/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-01-variables-are-immutable/src/main.rs}}
 ```
 
 Save and run the program using `cargo run`. You should receive an error
 message, as shown in this output:
 
 ```console
-{{#include ../listings/ch03-common-programming-concepts/no-listing-01-variables-are-immutable/output.txt}}
+{{#include ./listings/ch03-common-programming-concepts/no-listing-01-variables-are-immutable/output.txt}}
 ```
 
 This example shows how the compiler helps you find errors in your programs.
@@ -60,13 +60,13 @@ For example, let’s change *src/main.rs* to the following:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-02-adding-mut/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-02-adding-mut/src/main.rs}}
 ```
 
 When we run the program now, we get this:
 
 ```console
-{{#include ../listings/ch03-common-programming-concepts/no-listing-02-adding-mut/output.txt}}
+{{#include ./listings/ch03-common-programming-concepts/no-listing-02-adding-mut/output.txt}}
 ```
 
 We’re allowed to change the value that `x` binds to from `5` to `6` when `mut`
@@ -138,7 +138,7 @@ of the `let` keyword as follows:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-03-shadowing/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-03-shadowing/src/main.rs}}
 ```
 
 This program first binds `x` to a value of `5`. Then it shadows `x` by
@@ -148,7 +148,7 @@ previous value by `2` to give `x` a final value of `12`. When we run this
 program, it will output the following:
 
 ```console
-{{#include ../listings/ch03-common-programming-concepts/no-listing-03-shadowing/output.txt}}
+{{#include ./listings/ch03-common-programming-concepts/no-listing-03-shadowing/output.txt}}
 ```
 
 Shadowing is different from marking a variable as `mut`, because we’ll get a
@@ -164,7 +164,7 @@ program asks a user to show how many spaces they want between some text by
 inputting space characters, but we really want to store that input as a number:
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-04-shadowing-can-change-types/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-04-shadowing-can-change-types/src/main.rs:here}}
 ```
 
 This construct is allowed because the first `spaces` variable is a string type
@@ -175,13 +175,13 @@ from having to come up with different names, such as `spaces_str` and
 try to use `mut` for this, as shown here, we’ll get a compile-time error:
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-05-mut-cant-change-types/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-05-mut-cant-change-types/src/main.rs:here}}
 ```
 
 The error says we’re not allowed to mutate a variable’s type:
 
 ```console
-{{#include ../listings/ch03-common-programming-concepts/no-listing-05-mut-cant-change-types/output.txt}}
+{{#include ./listings/ch03-common-programming-concepts/no-listing-05-mut-cant-change-types/output.txt}}
 ```
 
 Now that we’ve explored how variables work, let’s look at more data types they

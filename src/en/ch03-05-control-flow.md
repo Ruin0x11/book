@@ -18,7 +18,7 @@ the `if` expression. In the *src/main.rs* file, input the following:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-26-if-true/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-26-if-true/src/main.rs}}
 ```
 
 All `if` expressions start with the keyword `if`, which is followed by a
@@ -40,20 +40,20 @@ to the next bit of code.
 Try running this code; you should see the following output:
 
 ```console
-{{#include ../listings/ch03-common-programming-concepts/no-listing-26-if-true/output.txt}}
+{{#include ./listings/ch03-common-programming-concepts/no-listing-26-if-true/output.txt}}
 ```
 
 Let’s try changing the value of `number` to a value that makes the condition
 `false` to see what happens:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-27-if-false/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-27-if-false/src/main.rs:here}}
 ```
 
 Run the program again, and look at the output:
 
 ```console
-{{#include ../listings/ch03-common-programming-concepts/no-listing-27-if-false/output.txt}}
+{{#include ./listings/ch03-common-programming-concepts/no-listing-27-if-false/output.txt}}
 ```
 
 It’s also worth noting that the condition in this code *must* be a `bool`. If
@@ -63,14 +63,14 @@ following code:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-28-if-condition-must-be-bool/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-28-if-condition-must-be-bool/src/main.rs}}
 ```
 
 The `if` condition evaluates to a value of `3` this time, and Rust throws an
 error:
 
 ```console
-{{#include ../listings/ch03-common-programming-concepts/no-listing-28-if-condition-must-be-bool/output.txt}}
+{{#include ./listings/ch03-common-programming-concepts/no-listing-28-if-condition-must-be-bool/output.txt}}
 ```
 
 The error indicates that Rust expected a `bool` but got an integer. Unlike
@@ -83,7 +83,7 @@ expression to the following:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-29-if-not-equal-0/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-29-if-not-equal-0/src/main.rs}}
 ```
 
 Running this code will print `number was something other than zero`.
@@ -96,14 +96,14 @@ expression. For example:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-30-else-if/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-30-else-if/src/main.rs}}
 ```
 
 This program has four possible paths it can take. After running it, you should
 see the following output:
 
 ```console
-{{#include ../listings/ch03-common-programming-concepts/no-listing-30-else-if/output.txt}}
+{{#include ./listings/ch03-common-programming-concepts/no-listing-30-else-if/output.txt}}
 ```
 
 When this program executes, it checks each `if` expression in turn and executes
@@ -125,7 +125,7 @@ statement, as in Listing 3-2.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/listing-03-02/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/listing-03-02/src/main.rs}}
 ```
 
 <span class="caption">Listing 3-2: Assigning the result of an `if` expression
@@ -135,7 +135,7 @@ The `number` variable will be bound to a value based on the outcome of the `if`
 expression. Run this code to see what happens:
 
 ```console
-{{#include ../listings/ch03-common-programming-concepts/listing-03-02/output.txt}}
+{{#include ./listings/ch03-common-programming-concepts/listing-03-02/output.txt}}
 ```
 
 Remember that blocks of code evaluate to the last expression in them, and
@@ -149,7 +149,7 @@ example, we’ll get an error:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-31-arms-must-return-same-type/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-31-arms-must-return-same-type/src/main.rs}}
 ```
 
 When we try to compile this code, we’ll get an error. The `if` and `else` arms
@@ -157,7 +157,7 @@ have value types that are incompatible, and Rust indicates exactly where to
 find the problem in the program:
 
 ```console
-{{#include ../listings/ch03-common-programming-concepts/no-listing-31-arms-must-return-same-type/output.txt}}
+{{#include ./listings/ch03-common-programming-concepts/no-listing-31-arms-must-return-same-type/output.txt}}
 ```
 
 The expression in the `if` block evaluates to an integer, and the expression in
@@ -189,7 +189,7 @@ like this:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-32-loop/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-32-loop/src/main.rs}}
 ```
 
 When we run this program, we’ll see `again!` printed over and over continuously
@@ -237,7 +237,7 @@ the loop; that value will be returned out of the loop so you can use it, as
 shown here:
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-33-return-value-from-loop/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-33-return-value-from-loop/src/main.rs}}
 ```
 
 Before the loop, we declare a variable named `counter` and initialize it to
@@ -264,7 +264,7 @@ another message and exits.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/listing-03-03/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/listing-03-03/src/main.rs}}
 ```
 
 <span class="caption">Listing 3-3: Using a `while` loop to run code while a
@@ -282,7 +282,7 @@ such as an array. For example, let’s look at Listing 3-4.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/listing-03-04/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/listing-03-04/src/main.rs}}
 ```
 
 <span class="caption">Listing 3-4: Looping through each element of a collection
@@ -294,7 +294,7 @@ when `index < 5` is no longer true). Running this code will print every element
 in the array:
 
 ```text
-{{#include ../listings/ch03-common-programming-concepts/listing-03-04/output.txt}}
+{{#include ./listings/ch03-common-programming-concepts/listing-03-04/output.txt}}
 ```
 
 All five array values appear in the terminal, as expected. Even though `index`
@@ -312,7 +312,7 @@ for each item in a collection. A `for` loop looks like the code in Listing 3-5.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/listing-03-05/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/listing-03-05/src/main.rs}}
 ```
 
 <span class="caption">Listing 3-5: Looping through each element of a collection
@@ -343,7 +343,7 @@ we’ve not yet talked about, `rev`, to reverse the range:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-34-for-range/src/main.rs}}
+{{#rustdoc_include ./listings/ch03-common-programming-concepts/no-listing-34-for-range/src/main.rs}}
 ```
 
 This code is a bit nicer, isn’t it?

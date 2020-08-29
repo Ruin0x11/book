@@ -29,7 +29,7 @@ for an `add_one` function in a crate named `my_crate`:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch14-more-about-cargo/listing-14-01/src/lib.rs}}
+{{#rustdoc_include ./listings/ch14-more-about-cargo/listing-14-01/src/lib.rs}}
 ```
 
 <span class="caption">Listing 14-1: A documentation comment for a
@@ -119,7 +119,7 @@ shown in Listing 14-2:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch14-more-about-cargo/listing-14-02/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch14-more-about-cargo/listing-14-02/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 14-2: Documentation for the `my_crate` crate as a
@@ -177,7 +177,7 @@ function named `mix`, as shown in Listing 14-3:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch14-more-about-cargo/listing-14-03/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch14-more-about-cargo/listing-14-03/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 14-3: An `art` library with items organized into
@@ -203,7 +203,7 @@ currently defined. Listing 14-4 shows an example of a crate that uses the
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch14-more-about-cargo/listing-14-04/src/main.rs}}
+{{#rustdoc_include ./listings/ch14-more-about-cargo/listing-14-04/src/main.rs}}
 ```
 
 <span class="caption">Listing 14-4: A crate using the `art` crate’s items with
@@ -227,7 +227,7 @@ items at the top level, as shown in Listing 14-5:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch14-more-about-cargo/listing-14-05/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch14-more-about-cargo/listing-14-05/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 14-5: Adding `pub use` statements to re-export
@@ -249,7 +249,7 @@ structure in Listing 14-5, as shown in Listing 14-6:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch14-more-about-cargo/listing-14-06/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch14-more-about-cargo/listing-14-06/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 14-6: A program using the re-exported items from

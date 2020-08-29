@@ -38,7 +38,7 @@ an incoming stream, it will print `Connection established!`.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,no_run
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-01/src/main.rs}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-01/src/main.rs}}
 ```
 
 <span class="caption">Listing 20-1: Listening for incoming streams and printing
@@ -130,7 +130,7 @@ look like Listing 20-2.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,no_run
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-02/src/main.rs}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-02/src/main.rs}}
 ```
 
 <span class="caption">Listing 20-2: Reading from the `TcpStream` and printing
@@ -267,7 +267,7 @@ Listing 20-3.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,no_run
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-03/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-03/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 20-3: Writing a tiny successful HTTP response to
@@ -300,7 +300,7 @@ possibility.
 <span class="filename">Filename: hello.html</span>
 
 ```html
-{{#include ../listings/ch20-web-server/listing-20-04/hello.html}}
+{{#include ./listings/ch20-web-server/listing-20-04/hello.html}}
 ```
 
 <span class="caption">Listing 20-4: A sample HTML file to return in a
@@ -314,7 +314,7 @@ and send it.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,no_run
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-05/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-05/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 20-5: Sending the contents of *hello.html* as the
@@ -352,7 +352,7 @@ received against what we know a request for */* looks like and adds `if` and
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,no_run
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-06/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-06/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 20-6: Matching the request and handling requests
@@ -383,7 +383,7 @@ indicating the response to the end user.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,no_run
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-07/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-07/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 20-7: Responding with status code 404 and an
@@ -398,7 +398,7 @@ any HTML you want or use the example HTML in Listing 20-8.
 <span class="filename">Filename: 404.html</span>
 
 ```html
-{{#include ../listings/ch20-web-server/listing-20-08/404.html}}
+{{#include ./listings/ch20-web-server/listing-20-08/404.html}}
 ```
 
 <span class="caption">Listing 20-8: Sample content for the page to send back
@@ -422,7 +422,7 @@ the large `if` and `else` blocks.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,no_run
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-09/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-09/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 20-9: Refactoring the `if` and `else` blocks to

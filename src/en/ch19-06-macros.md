@@ -78,7 +78,7 @@ Listing 19-28 shows a slightly simplified definition of the `vec!` macro.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch19-advanced-features/listing-19-28/src/lib.rs}}
+{{#rustdoc_include ./listings/ch19-advanced-features/listing-19-28/src/lib.rs}}
 ```
 
 <span class="caption">Listing 19-28: A simplified version of the `vec!` macro
@@ -213,7 +213,7 @@ programmer to write code like Listing 19-30 using our crate.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch19-advanced-features/listing-19-30/src/main.rs}}
+{{#rustdoc_include ./listings/ch19-advanced-features/listing-19-30/src/main.rs}}
 ```
 
 <span class="caption">Listing 19-30: The code a user of our crate will be able
@@ -231,14 +231,14 @@ Next, we’ll define the `HelloMacro` trait and its associated function:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch19-advanced-features/no-listing-20-impl-hellomacro-for-pancakes/hello_macro/src/lib.rs}}
+{{#rustdoc_include ./listings/ch19-advanced-features/no-listing-20-impl-hellomacro-for-pancakes/hello_macro/src/lib.rs}}
 ```
 
 We have a trait and its function. At this point, our crate user could implement
 the trait to achieve the desired functionality, like so:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch19-advanced-features/no-listing-20-impl-hellomacro-for-pancakes/pancakes/src/main.rs}}
+{{#rustdoc_include ./listings/ch19-advanced-features/no-listing-20-impl-hellomacro-for-pancakes/pancakes/src/main.rs}}
 ```
 
 However, they would need to write the implementation block for each type they
@@ -280,7 +280,7 @@ in a moment, so we need to add them as dependencies. Add the following to the
 <span class="filename">Filename: hello_macro_derive/Cargo.toml</span>
 
 ```toml
-{{#include ../listings/ch19-advanced-features/listing-19-31/hello_macro/hello_macro_derive/Cargo.toml:7:12}}
+{{#include ./listings/ch19-advanced-features/listing-19-31/hello_macro/hello_macro_derive/Cargo.toml:7:12}}
 ```
 
 To start defining the procedural macro, place the code in Listing 19-31 into
@@ -290,7 +290,7 @@ won’t compile until we add a definition for the `impl_hello_macro` function.
 <span class="filename">Filename: hello_macro_derive/src/lib.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch19-advanced-features/listing-19-31/hello_macro/hello_macro_derive/src/lib.rs}}
+{{#rustdoc_include ./listings/ch19-advanced-features/listing-19-31/hello_macro/hello_macro_derive/src/lib.rs}}
 ```
 
 <span class="caption">Listing 19-31: Code that most procedural macro crates
@@ -384,7 +384,7 @@ into a `DeriveInput` instance, let’s generate the code that implements the
 <span class="filename">Filename: hello_macro_derive/src/lib.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch19-advanced-features/listing-19-33/hello_macro/hello_macro_derive/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch19-advanced-features/listing-19-33/hello_macro/hello_macro_derive/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 19-33: Implementing the `HelloMacro` trait using
@@ -435,7 +435,7 @@ crate’s *Cargo.toml*. If you’re publishing your versions of `hello_macro` an
 dependencies; if not, you can specify them as `path` dependencies as follows:
 
 ```toml
-{{#include ../listings/ch19-advanced-features/no-listing-21-pancakes/pancakes/Cargo.toml:7:9}}
+{{#include ./listings/ch19-advanced-features/no-listing-21-pancakes/pancakes/Cargo.toml:7:9}}
 ```
 
 Put the code in Listing 19-30 into *src/main.rs*, and run `cargo run`: it

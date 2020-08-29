@@ -47,7 +47,7 @@ cache the calculated average for us. Listing 17-1 has the definition of the
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch17-oop/listing-17-01/src/lib.rs}}
+{{#rustdoc_include ./listings/ch17-oop/listing-17-01/src/lib.rs}}
 ```
 
 <span class="caption">Listing 17-1: An `AveragedCollection` struct that
@@ -63,7 +63,7 @@ on the struct, as shown in Listing 17-2:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch17-oop/listing-17-02/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch17-oop/listing-17-02/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 17-2: Implementations of the public methods

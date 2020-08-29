@@ -30,7 +30,7 @@ we passed in.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-01/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-01/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 13-1: A function to stand in for a hypothetical
@@ -55,7 +55,7 @@ function we’ll use.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-02/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-02/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 13-2: A `main` function with hardcoded values to
@@ -76,7 +76,7 @@ changes in this example will be made to this function.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-03/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-03/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 13-3: The business logic that prints the workout
@@ -118,7 +118,7 @@ function into a variable, as shown in Listing 13-4.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-04/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-04/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 13-4: Extracting the calls to
@@ -145,7 +145,7 @@ the closure we’re introducing here.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-05/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-05/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 13-5: Defining a closure and storing it in the
@@ -180,7 +180,7 @@ want to use, as shown in Listing 13-6.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-06/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-06/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 13-6: Calling the `expensive_closure` we’ve
@@ -225,7 +225,7 @@ would look like the definition shown in Listing 13-7.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-07/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-07/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 13-7: Adding optional type annotations of the
@@ -264,7 +264,7 @@ first time and a `u32` the second time, we’ll get an error.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-08/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-08/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 13-8: Attempting to call a closure whose types
@@ -273,7 +273,7 @@ are inferred with two different types</span>
 The compiler gives us this error:
 
 ```console
-{{#include ../listings/ch13-functional-features/listing-13-08/output.txt}}
+{{#include ./listings/ch13-functional-features/listing-13-08/output.txt}}
 ```
 
 The first time we call `example_closure` with the `String` value, the compiler
@@ -321,7 +321,7 @@ and an optional result value.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-09/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-09/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 13-9: Defining a `Cacher` struct that holds a
@@ -351,7 +351,7 @@ The logic around the `value` field we’ve just described is defined in Listing
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-10/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-10/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 13-10: The caching logic of `Cacher`</span>
@@ -382,7 +382,7 @@ Listing 13-11 shows how we can use this `Cacher` struct in the function
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-11/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-11/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 13-11: Using `Cacher` in the `generate_workout`
@@ -414,7 +414,7 @@ same value for the parameter `arg` to the `value` method. That is, this test of
 `Cacher` will fail:
 
 ```rust,ignore,panics
-{{#rustdoc_include ../listings/ch13-functional-features/no-listing-01-failing-cacher-test/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/no-listing-01-failing-cacher-test/src/lib.rs:here}}
 ```
 
 This test creates a new `Cacher` instance with a closure that returns the value
@@ -426,7 +426,7 @@ Run this test with the `Cacher` implementation in Listing 13-9 and Listing
 13-10, and the test will fail on the `assert_eq!` with this message:
 
 ```console
-{{#include ../listings/ch13-functional-features/no-listing-01-failing-cacher-test/output.txt}}
+{{#include ./listings/ch13-functional-features/no-listing-01-failing-cacher-test/output.txt}}
 ```
 
 The problem is that the first time we called `c.value` with 1, the `Cacher`
@@ -460,7 +460,7 @@ that uses the `x` variable from the closure’s surrounding environment.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-12/src/main.rs}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-12/src/main.rs}}
 ```
 
 <span class="caption">Listing 13-12: Example of a closure that refers to a
@@ -476,13 +476,13 @@ code won’t compile:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch13-functional-features/no-listing-02-functions-cant-capture/src/main.rs}}
+{{#rustdoc_include ./listings/ch13-functional-features/no-listing-02-functions-cant-capture/src/main.rs}}
 ```
 
 We get an error:
 
 ```console
-{{#include ../listings/ch13-functional-features/no-listing-02-functions-cant-capture/output.txt}}
+{{#include ./listings/ch13-functional-features/no-listing-02-functions-cant-capture/output.txt}}
 ```
 
 The compiler even reminds us that this only works with closures!
@@ -529,13 +529,13 @@ yet compile.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch13-functional-features/no-listing-03-move-closures/src/main.rs}}
+{{#rustdoc_include ./listings/ch13-functional-features/no-listing-03-move-closures/src/main.rs}}
 ```
 
 We receive the following error:
 
 ```console
-{{#include ../listings/ch13-functional-features/no-listing-03-move-closures/output.txt}}
+{{#include ./listings/ch13-functional-features/no-listing-03-move-closures/output.txt}}
 ```
 
 The `x` value is moved into the closure when the closure is defined, because we

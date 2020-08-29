@@ -34,7 +34,7 @@ fail. In Listing 9-3 we try to open a file.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch09-error-handling/listing-09-03/src/main.rs}}
+{{#rustdoc_include ./listings/ch09-error-handling/listing-09-03/src/main.rs}}
 ```
 
 <span class="caption">Listing 9-3: Opening a file</span>
@@ -48,13 +48,13 @@ type of `f` *is*. Let’s try it! We know that the return type of `File::open`
 isn’t of type `u32`, so let’s change the `let f` statement to this:
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch09-error-handling/no-listing-02-ask-compiler-for-type/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch09-error-handling/no-listing-02-ask-compiler-for-type/src/main.rs:here}}
 ```
 
 Attempting to compile now gives us the following output:
 
 ```console
-{{#include ../listings/ch09-error-handling/no-listing-02-ask-compiler-for-type/output.txt}}
+{{#include ./listings/ch09-error-handling/no-listing-02-ask-compiler-for-type/output.txt}}
 ```
 
 This tells us the return type of the `File::open` function is a `Result<T, E>`.
@@ -83,7 +83,7 @@ Chapter 6.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,should_panic
-{{#rustdoc_include ../listings/ch09-error-handling/listing-09-04/src/main.rs}}
+{{#rustdoc_include ./listings/ch09-error-handling/listing-09-04/src/main.rs}}
 ```
 
 <span class="caption">Listing 9-4: Using a `match` expression to handle the
@@ -104,7 +104,7 @@ there’s no file named *hello.txt* in our current directory and we run this
 code, we’ll see the following output from the `panic!` macro:
 
 ```text
-{{#include ../listings/ch09-error-handling/listing-09-04/output.txt}}
+{{#include ./listings/ch09-error-handling/listing-09-04/output.txt}}
 ```
 
 As usual, this output tells us exactly what has gone wrong.
@@ -125,7 +125,7 @@ at Listing 9-5, which adds an inner `match` expression.
 tests to fail lol -->
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch09-error-handling/listing-09-05/src/main.rs}}
+{{#rustdoc_include ./listings/ch09-error-handling/listing-09-05/src/main.rs}}
 ```
 
 <span class="caption">Listing 9-5: Handling different kinds of errors in
@@ -155,7 +155,7 @@ E>` type has many methods that accept a closure and are implemented using
 more seasoned Rustacean might write this code instead of Listing 9-5:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch09-error-handling/no-listing-03-closures/src/main.rs}}
+{{#rustdoc_include ./listings/ch09-error-handling/no-listing-03-closures/src/main.rs}}
 ```
 
 Although this code has the same behavior as Listing 9-5, it doesn’t contain any
@@ -177,7 +177,7 @@ call the `panic!` macro for us. Here is an example of `unwrap` in action:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,should_panic
-{{#rustdoc_include ../listings/ch09-error-handling/no-listing-04-unwrap/src/main.rs}}
+{{#rustdoc_include ./listings/ch09-error-handling/no-listing-04-unwrap/src/main.rs}}
 ```
 
 If we run this code without a *hello.txt* file, we’ll see an error message from
@@ -197,7 +197,7 @@ panic easier. The syntax of `expect` looks like this:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,should_panic
-{{#rustdoc_include ../listings/ch09-error-handling/no-listing-05-expect/src/main.rs}}
+{{#rustdoc_include ./listings/ch09-error-handling/no-listing-05-expect/src/main.rs}}
 ```
 
 We use `expect` in the same way as `unwrap`: to return the file handle or call
@@ -236,7 +236,7 @@ file panics. We do want to include it for reader experimentation purposes, but
 don't want to include it for rustdoc testing purposes. -->
 
 ```rust
-{{#include ../listings/ch09-error-handling/listing-09-06/src/main.rs:here}}
+{{#include ./listings/ch09-error-handling/listing-09-06/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 9-6: A function that returns errors to the
@@ -302,7 +302,7 @@ file panics. We do want to include it for reader experimentation purposes, but
 don't want to include it for rustdoc testing purposes. -->
 
 ```rust
-{{#include ../listings/ch09-error-handling/listing-09-07/src/main.rs:here}}
+{{#include ./listings/ch09-error-handling/listing-09-07/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 9-7: A function that returns errors to the
@@ -345,7 +345,7 @@ file panics. We do want to include it for reader experimentation purposes, but
 don't want to include it for rustdoc testing purposes. -->
 
 ```rust
-{{#include ../listings/ch09-error-handling/listing-09-08/src/main.rs:here}}
+{{#include ./listings/ch09-error-handling/listing-09-08/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 9-8: Chaining method calls after the `?`
@@ -370,7 +370,7 @@ file panics. We do want to include it for reader experimentation purposes, but
 don't want to include it for rustdoc testing purposes. -->
 
 ```rust
-{{#include ../listings/ch09-error-handling/listing-09-09/src/main.rs:here}}
+{{#include ./listings/ch09-error-handling/listing-09-09/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 9-9: Using `fs::read_to_string` instead of
@@ -395,13 +395,13 @@ Let’s look at what happens if we use the `?` operator in the `main` function,
 which you’ll recall has a return type of `()`:
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch09-error-handling/no-listing-06-question-mark-in-main/src/main.rs}}
+{{#rustdoc_include ./listings/ch09-error-handling/no-listing-06-question-mark-in-main/src/main.rs}}
 ```
 
 When we compile this code, we get the following error message:
 
 ```console
-{{#include ../listings/ch09-error-handling/no-listing-06-question-mark-in-main/output.txt}}
+{{#include ./listings/ch09-error-handling/no-listing-06-question-mark-in-main/output.txt}}
 ```
 
 This error points out that we’re only allowed to use the `?` operator in a
@@ -419,7 +419,7 @@ type must be. One valid return type for main is `()`, and conveniently, another
 valid return type is `Result<T, E>`, as shown here:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch09-error-handling/no-listing-07-main-returning-result/src/main.rs}}
+{{#rustdoc_include ./listings/ch09-error-handling/no-listing-07-main-returning-result/src/main.rs}}
 ```
 
 The `Box<dyn Error>` type is called a trait object, which we’ll talk about in

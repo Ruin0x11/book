@@ -75,7 +75,7 @@ function `parse_config`, which we’ll define in *src/main.rs* for the moment.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-05/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-05/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 12-5: Extracting a `parse_config` function from
@@ -120,7 +120,7 @@ Listing 12-6 shows the improvements to the `parse_config` function.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,should_panic
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-06/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-06/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 12-6: Refactoring `parse_config` to return an
@@ -188,7 +188,7 @@ shows the changes we need to make.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,should_panic
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-07/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-07/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 12-7: Changing `parse_config` into
@@ -207,7 +207,7 @@ panic if the vector contains fewer than three items. Try running the program
 without any arguments; it will look like this:
 
 ```console
-{{#include ../listings/ch12-an-io-project/listing-12-07/output.txt}}
+{{#include ./listings/ch12-an-io-project/listing-12-07/output.txt}}
 ```
 
 The line `index out of bounds: the len is 1 but the index is 1` is an error
@@ -224,7 +224,7 @@ out of bounds` message.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-08/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-08/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 12-8: Adding a check for the number of
@@ -242,7 +242,7 @@ With these extra few lines of code in `new`, let’s run the program without any
 arguments again to see what the error looks like now:
 
 ```console
-{{#include ../listings/ch12-an-io-project/listing-12-08/output.txt}}
+{{#include ./listings/ch12-an-io-project/listing-12-08/output.txt}}
 ```
 
 This output is better: we now have a reasonable error message. However, we also
@@ -270,7 +270,7 @@ next listing.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-09/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-09/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 12-9: Returning a `Result` from
@@ -303,7 +303,7 @@ program that the program exited with an error state.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-10/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-10/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 12-10: Exiting with an error code if creating a
@@ -332,7 +332,7 @@ number that was passed as the exit status code. This is similar to the
 extra output. Let’s try it:
 
 ```console
-{{#include ../listings/ch12-an-io-project/listing-12-10/output.txt}}
+{{#include ./listings/ch12-an-io-project/listing-12-10/output.txt}}
 ```
 
 Great! This output is much friendlier for our users.
@@ -354,7 +354,7 @@ defining the function in *src/main.rs*.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-11/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-11/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 12-11: Extracting a `run` function containing the
@@ -377,7 +377,7 @@ signature and body of `run`.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-12/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-12/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 12-12: Changing the `run` function to return
@@ -412,7 +412,7 @@ it doesn’t return a value we need.
 When you run this code, it will compile but will display a warning:
 
 ```console
-{{#include ../listings/ch12-an-io-project/listing-12-12/output.txt}}
+{{#include ./listings/ch12-an-io-project/listing-12-12/output.txt}}
 ```
 
 Rust tells us that our code ignored the `Result` value and the `Result` value
@@ -428,7 +428,7 @@ with `Config::new` in Listing 12-10, but with a slight difference:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch12-an-io-project/no-listing-01-handling-errors-in-main/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/no-listing-01-handling-errors-in-main/src/main.rs:here}}
 ```
 
 We use `if let` rather than `unwrap_or_else` to check whether `run` returns an
@@ -462,7 +462,7 @@ compile until we modify *src/main.rs* in Listing 12-14.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-13/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-13/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 12-13: Moving `Config` and `run` into
@@ -478,7 +478,7 @@ binary crate in *src/main.rs*, as shown in Listing 12-14.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-14/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-14/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 12-14: Using the `minigrep` library crate in

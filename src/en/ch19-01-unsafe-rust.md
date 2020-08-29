@@ -91,7 +91,7 @@ Listing 19-1 shows how to create an immutable and a mutable raw pointer from
 references.
 
 ```rust
-{{#rustdoc_include ../listings/ch19-advanced-features/listing-19-01/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch19-advanced-features/listing-19-01/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 19-1: Creating raw pointers from references</span>
@@ -114,7 +114,7 @@ is no memory access, or the program might error with a segmentation fault.
 Usually, there is no good reason to write code like this, but it is possible.
 
 ```rust
-{{#rustdoc_include ../listings/ch19-advanced-features/listing-19-02/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch19-advanced-features/listing-19-02/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 19-2: Creating a raw pointer to an arbitrary
@@ -125,7 +125,7 @@ raw pointers and read the data being pointed to. In Listing 19-3, we use the
 dereference operator `*` on a raw pointer that requires an `unsafe` block.
 
 ```rust,unsafe
-{{#rustdoc_include ../listings/ch19-advanced-features/listing-19-03/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch19-advanced-features/listing-19-03/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 19-3: Dereferencing raw pointers within an
@@ -166,14 +166,14 @@ Here is an unsafe function named `dangerous` that doesn’t do anything in its
 body:
 
 ```rust,unsafe
-{{#rustdoc_include ../listings/ch19-advanced-features/no-listing-01-unsafe-fn/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch19-advanced-features/no-listing-01-unsafe-fn/src/main.rs:here}}
 ```
 
 We must call the `dangerous` function within a separate `unsafe` block. If we
 try to call `dangerous` without the `unsafe` block, we’ll get an error:
 
 ```console
-{{#include ../listings/ch19-advanced-features/output-only-01-missing-unsafe/output.txt}}
+{{#include ./listings/ch19-advanced-features/output-only-01-missing-unsafe/output.txt}}
 ```
 
 By inserting the `unsafe` block around our call to `dangerous`, we’re asserting
@@ -196,7 +196,7 @@ slice and makes it two by splitting the slice at the index given as an
 argument. Listing 19-4 shows how to use `split_at_mut`.
 
 ```rust
-{{#rustdoc_include ../listings/ch19-advanced-features/listing-19-04/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch19-advanced-features/listing-19-04/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 19-4: Using the safe `split_at_mut`
@@ -208,7 +208,7 @@ implement `split_at_mut` as a function rather than a method and only for slices
 of `i32` values rather than for a generic type `T`.
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch19-advanced-features/listing-19-05/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch19-advanced-features/listing-19-05/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 19-5: An attempted implementation of
@@ -227,7 +227,7 @@ slice.
 When we try to compile the code in Listing 19-5, we’ll get an error.
 
 ```console
-{{#include ../listings/ch19-advanced-features/listing-19-05/output.txt}}
+{{#include ./listings/ch19-advanced-features/listing-19-05/output.txt}}
 ```
 
 Rust’s borrow checker can’t understand that we’re borrowing different parts of
@@ -240,7 +240,7 @@ Listing 19-6 shows how to use an `unsafe` block, a raw pointer, and some calls
 to unsafe functions to make the implementation of `split_at_mut` work.
 
 ```rust,unsafe
-{{#rustdoc_include ../listings/ch19-advanced-features/listing-19-06/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch19-advanced-features/listing-19-06/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 19-6: Using unsafe code in the implementation of
@@ -282,7 +282,7 @@ likely crash when the slice is used. This code takes an arbitrary memory
 location and creates a slice 10,000 items long.
 
 ```rust,unsafe
-{{#rustdoc_include ../listings/ch19-advanced-features/listing-19-07/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch19-advanced-features/listing-19-07/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 19-7: Creating a slice from an arbitrary memory
@@ -309,7 +309,7 @@ responsibility falls on the programmer to ensure safety.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,unsafe
-{{#rustdoc_include ../listings/ch19-advanced-features/listing-19-08/src/main.rs}}
+{{#rustdoc_include ./listings/ch19-advanced-features/listing-19-08/src/main.rs}}
 ```
 
 <span class="caption">Listing 19-8: Declaring and calling an `extern` function
@@ -359,7 +359,7 @@ value.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch19-advanced-features/listing-19-09/src/main.rs}}
+{{#rustdoc_include ./listings/ch19-advanced-features/listing-19-09/src/main.rs}}
 ```
 
 <span class="caption">Listing 19-9: Defining and using an immutable static
@@ -388,7 +388,7 @@ static variable named `COUNTER`.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,unsafe
-{{#rustdoc_include ../listings/ch19-advanced-features/listing-19-10/src/main.rs}}
+{{#rustdoc_include ./listings/ch19-advanced-features/listing-19-10/src/main.rs}}
 ```
 
 <span class="caption">Listing 19-10: Reading from or writing to a mutable
@@ -415,7 +415,7 @@ compiler can’t verify. We can declare that a trait is `unsafe` by adding the
 `unsafe` too, as shown in Listing 19-11.
 
 ```rust,unsafe
-{{#rustdoc_include ../listings/ch19-advanced-features/listing-19-11/src/main.rs}}
+{{#rustdoc_include ./listings/ch19-advanced-features/listing-19-11/src/main.rs}}
 ```
 
 <span class="caption">Listing 19-11: Defining and implementing an unsafe

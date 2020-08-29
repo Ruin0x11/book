@@ -25,7 +25,7 @@ Consider the program in Listing 10-17, which has an outer scope and an inner
 scope.
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-17/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-17/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 10-17: An attempt to use a reference whose value
@@ -46,7 +46,7 @@ compile because the value `r` is referring to has gone out of scope before we
 try to use it. Here is the error message:
 
 ```console
-{{#include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-17/output.txt}}
+{{#include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-17/output.txt}}
 ```
 
 The variable `x` doesn’t “live long enough.” The reason is that `x` will be out
@@ -64,7 +64,7 @@ whether all borrows are valid. Listing 10-18 shows the same code as Listing
 10-17 but with annotations showing the lifetimes of the variables.
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-18/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-18/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 10-18: Annotations of the lifetimes of `r` and
@@ -81,7 +81,7 @@ Listing 10-19 fixes the code so it doesn’t have a dangling reference and
 compiles without any errors.
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-19/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-19/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 10-19: A valid reference because the data has a
@@ -105,7 +105,7 @@ longest string is abcd`.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-20/src/main.rs}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-20/src/main.rs}}
 ```
 
 <span class="caption">Listing 10-20: A `main` function that calls the `longest`
@@ -124,7 +124,7 @@ won’t compile.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-21/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-21/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 10-21: An implementation of the `longest`
@@ -134,7 +134,7 @@ compile</span>
 Instead, we get the following error that talks about lifetimes:
 
 ```console
-{{#include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-21/output.txt}}
+{{#include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-21/output.txt}}
 ```
 
 The help text reveals that the return type needs a generic lifetime parameter
@@ -201,7 +201,7 @@ Listing 10-22.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-22/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-22/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 10-22: The `longest` function definition
@@ -248,7 +248,7 @@ a straightforward example.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-23/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-23/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 10-23: Using the `longest` function with
@@ -271,7 +271,7 @@ compile.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-24/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-24/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 10-24: Attempting to use `result` after `string2`
@@ -280,7 +280,7 @@ has gone out of scope</span>
 When we try to compile this code, we’ll get this error:
 
 ```console
-{{#include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-24/output.txt}}
+{{#include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-24/output.txt}}
 ```
 
 The error shows that for `result` to be valid for the `println!` statement,
@@ -313,7 +313,7 @@ following code will compile:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-08-only-one-reference-with-lifetime/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/no-listing-08-only-one-reference-with-lifetime/src/main.rs:here}}
 ```
 
 In this example, we’ve specified a lifetime parameter `'a` for the parameter
@@ -330,7 +330,7 @@ this attempted implementation of the `longest` function that won’t compile:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-09-unrelated-lifetime/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/no-listing-09-unrelated-lifetime/src/main.rs:here}}
 ```
 
 Here, even though we’ve specified a lifetime parameter `'a` for the return
@@ -339,7 +339,7 @@ lifetime is not related to the lifetime of the parameters at all. Here is the
 error message we get:
 
 ```console
-{{#include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-09-unrelated-lifetime/output.txt}}
+{{#include ./listings/ch10-generic-types-traits-and-lifetimes/no-listing-09-unrelated-lifetime/output.txt}}
 ```
 
 The problem is that `result` goes out of scope and gets cleaned up at the end
@@ -365,7 +365,7 @@ struct named `ImportantExcerpt` that holds a string slice.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-25/src/main.rs}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-25/src/main.rs}}
 ```
 
 <span class="caption">Listing 10-25: A struct that holds a reference, so its
@@ -395,7 +395,7 @@ Chapter 4 we had a function in Listing 4-9, which is shown again in Listing
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-26/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-26/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 10-26: A function we defined in Listing 4-9 that
@@ -535,7 +535,7 @@ First, we’ll use a method named `level` whose only parameter is a reference to
 `self` and whose return value is an `i32`, which is not a reference to anything:
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-10-lifetimes-on-methods/src/main.rs:1st}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/no-listing-10-lifetimes-on-methods/src/main.rs:1st}}
 ```
 
 The lifetime parameter declaration after `impl` and its use after the type name
@@ -545,7 +545,7 @@ to `self` because of the first elision rule.
 Here is an example where the third lifetime elision rule applies:
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-10-lifetimes-on-methods/src/main.rs:3rd}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/no-listing-10-lifetimes-on-methods/src/main.rs:3rd}}
 ```
 
 There are two input lifetimes, so Rust applies the first lifetime elision rule
@@ -581,7 +581,7 @@ Let’s briefly look at the syntax of specifying generic type parameters, trait
 bounds, and lifetimes all in one function!
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-11-generics-traits-and-lifetimes/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/no-listing-11-generics-traits-and-lifetimes/src/main.rs:here}}
 ```
 
 This is the `longest` function from Listing 10-22 that returns the longer of

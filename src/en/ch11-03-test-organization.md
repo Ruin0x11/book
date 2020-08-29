@@ -38,7 +38,7 @@ this chapter, Cargo generated this code for us:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch11-writing-automated-tests/listing-11-01/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch11-writing-automated-tests/listing-11-01/src/lib.rs:here}}
 ```
 
 This code is the automatically generated test module. The attribute `cfg`
@@ -61,7 +61,7 @@ Consider the code in Listing 11-12 with the private function `internal_adder`.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch11-writing-automated-tests/listing-11-12/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch11-writing-automated-tests/listing-11-12/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 11-12: Testing a private function</span>
@@ -96,7 +96,7 @@ Let’s create an integration test. With the code in Listing 11-12 still in the
 <span class="filename">Filename: tests/integration_test.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch11-writing-automated-tests/listing-11-13/tests/integration_test.rs}}
+{{#rustdoc_include ./listings/ch11-writing-automated-tests/listing-11-13/tests/integration_test.rs}}
 ```
 
 <span class="caption">Listing 11-13: An integration test of a function in the
@@ -111,7 +111,7 @@ We don’t need to annotate any code in *tests/integration_test.rs* with
 in this directory only when we run `cargo test`. Run `cargo test` now:
 
 ```console
-{{#include ../listings/ch11-writing-automated-tests/listing-11-13/output.txt}}
+{{#include ./listings/ch11-writing-automated-tests/listing-11-13/output.txt}}
 ```
 
 The three sections of output include the unit tests, the integration test, and
@@ -137,7 +137,7 @@ particular integration test file, use the `--test` argument of `cargo test`
 followed by the name of the file:
 
 ```console
-{{#include ../listings/ch11-writing-automated-tests/output-only-05-single-integration/output.txt}}
+{{#include ./listings/ch11-writing-automated-tests/output-only-05-single-integration/output.txt}}
 ```
 
 This command runs only the tests in the *tests/integration_test.rs* file.
@@ -167,7 +167,7 @@ multiple test files:
 <span class="filename">Filename: tests/common.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch11-writing-automated-tests/no-listing-12-shared-test-code-problem/tests/common.rs}}
+{{#rustdoc_include ./listings/ch11-writing-automated-tests/no-listing-12-shared-test-code-problem/tests/common.rs}}
 ```
 
 When we run the tests again, we’ll see a new section in the test output for the
@@ -175,7 +175,7 @@ When we run the tests again, we’ll see a new section in the test output for th
 did we call the `setup` function from anywhere:
 
 ```console
-{{#include ../listings/ch11-writing-automated-tests/no-listing-12-shared-test-code-problem/output.txt}}
+{{#include ./listings/ch11-writing-automated-tests/no-listing-12-shared-test-code-problem/output.txt}}
 ```
 
 Having `common` appear in the test results with `running 0 tests` displayed for
@@ -198,7 +198,7 @@ function from the `it_adds_two` test in *tests/integration_test.rs*:
 <span class="filename">Filename: tests/integration_test.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch11-writing-automated-tests/no-listing-13-fix-shared-test-code-problem/tests/integration_test.rs}}
+{{#rustdoc_include ./listings/ch11-writing-automated-tests/no-listing-13-fix-shared-test-code-problem/tests/integration_test.rs}}
 ```
 
 Note that the `mod common;` declaration is the same as the module declaration

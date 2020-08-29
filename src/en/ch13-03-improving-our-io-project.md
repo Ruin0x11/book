@@ -16,7 +16,7 @@ Listing 12-23:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch13-functional-features/listing-12-23-reproduced/src/lib.rs:ch13}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-12-23-reproduced/src/lib.rs:ch13}}
 ```
 
 <span class="caption">Listing 13-24: Reproduction of the `Config::new` function
@@ -47,7 +47,7 @@ Open your I/O project’s *src/main.rs* file, which should look like this:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch13-functional-features/listing-12-24-reproduced/src/main.rs:ch13}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-12-24-reproduced/src/main.rs:ch13}}
 ```
 
 We’ll change the start of the `main` function that we had in Listing 12-24 to
@@ -57,7 +57,7 @@ well.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-25/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-25/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 13-25: Passing the return value of `env::args` to
@@ -76,7 +76,7 @@ body.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-26/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-26/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 13-26: Updating the signature of `Config::new` to
@@ -99,7 +99,7 @@ Listing 12-23 to use the `next` method:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-27/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-27/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 13-27: Changing the body of `Config::new` to use
@@ -121,7 +121,7 @@ project, which is reproduced here in Listing 13-28 as it was in Listing 12-19:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-19/src/lib.rs:ch13}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-19/src/lib.rs:ch13}}
 ```
 
 <span class="caption">Listing 13-28: The implementation of the `search`
@@ -137,7 +137,7 @@ concurrent access to the `results` vector. Listing 13-29 shows this change:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-29/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-29/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 13-29: Using iterator adaptor methods in the

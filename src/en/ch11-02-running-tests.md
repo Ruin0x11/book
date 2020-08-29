@@ -62,7 +62,7 @@ parameter and returns 10, as well as a test that passes and a test that fails.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,panics
-{{#rustdoc_include ../listings/ch11-writing-automated-tests/listing-11-10/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch11-writing-automated-tests/listing-11-10/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 11-10: Tests for a function that calls
@@ -71,7 +71,7 @@ parameter and returns 10, as well as a test that passes and a test that fails.
 When we run these tests with `cargo test`, we’ll see the following output:
 
 ```console
-{{#include ../listings/ch11-writing-automated-tests/listing-11-10/output.txt}}
+{{#include ./listings/ch11-writing-automated-tests/listing-11-10/output.txt}}
 ```
 
 Note that nowhere in this output do we see `I got the value 4`, which is what
@@ -90,7 +90,7 @@ When we run the tests in Listing 11-10 again with the `--show-output` flag, we
 see the following output:
 
 ```console
-{{#include ../listings/ch11-writing-automated-tests/output-only-01-show-output/output.txt}}
+{{#include ./listings/ch11-writing-automated-tests/output-only-01-show-output/output.txt}}
 ```
 
 ### Running a Subset of Tests by Name
@@ -106,7 +106,7 @@ To demonstrate how to run a subset of tests, we’ll create three tests for our
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch11-writing-automated-tests/listing-11-11/src/lib.rs}}
+{{#rustdoc_include ./listings/ch11-writing-automated-tests/listing-11-11/src/lib.rs}}
 ```
 
 <span class="caption">Listing 11-11: Three tests with three different
@@ -116,7 +116,7 @@ If we run the tests without passing any arguments, as we saw earlier, all the
 tests will run in parallel:
 
 ```console
-{{#include ../listings/ch11-writing-automated-tests/listing-11-11/output.txt}}
+{{#include ./listings/ch11-writing-automated-tests/listing-11-11/output.txt}}
 ```
 
 #### Running Single Tests
@@ -124,7 +124,7 @@ tests will run in parallel:
 We can pass the name of any test function to `cargo test` to run only that test:
 
 ```console
-{{#include ../listings/ch11-writing-automated-tests/output-only-02-single-test/output.txt}}
+{{#include ./listings/ch11-writing-automated-tests/output-only-02-single-test/output.txt}}
 ```
 
 Only the test with the name `one_hundred` ran; the other two tests didn’t match
@@ -141,7 +141,7 @@ will be run. For example, because two of our tests’ names contain `add`, we ca
 run those two by running `cargo test add`:
 
 ```console
-{{#include ../listings/ch11-writing-automated-tests/output-only-03-multiple-tests/output.txt}}
+{{#include ./listings/ch11-writing-automated-tests/output-only-03-multiple-tests/output.txt}}
 ```
 
 This command ran all tests with `add` in the name and filtered out the test
@@ -160,21 +160,21 @@ here:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch11-writing-automated-tests/no-listing-11-ignore-a-test/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch11-writing-automated-tests/no-listing-11-ignore-a-test/src/lib.rs:here}}
 ```
 
 After `#[test]` we add the `#[ignore]` line to the test we want to exclude. Now
 when we run our tests, `it_works` runs, but `expensive_test` doesn’t:
 
 ```console
-{{#include ../listings/ch11-writing-automated-tests/no-listing-11-ignore-a-test/output.txt}}
+{{#include ./listings/ch11-writing-automated-tests/no-listing-11-ignore-a-test/output.txt}}
 ```
 
 The `expensive_test` function is listed as `ignored`. If we want to run only
 the ignored tests, we can use `cargo test -- --ignored`:
 
 ```console
-{{#include ../listings/ch11-writing-automated-tests/output-only-04-running-ignored/output.txt}}
+{{#include ./listings/ch11-writing-automated-tests/output-only-04-running-ignored/output.txt}}
 ```
 
 By controlling which tests run, you can make sure your `cargo test` results

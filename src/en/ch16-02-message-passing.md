@@ -36,7 +36,7 @@ want to send over the channel.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-06/src/main.rs}}
+{{#rustdoc_include ./listings/ch16-fearless-concurrency/listing-16-06/src/main.rs}}
 ```
 
 <span class="caption">Listing 16-6: Creating a channel and assigning the two
@@ -68,7 +68,7 @@ sending a chat message from one thread to another.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-07/src/main.rs}}
+{{#rustdoc_include ./listings/ch16-fearless-concurrency/listing-16-07/src/main.rs}}
 ```
 
 <span class="caption">Listing 16-7: Moving `tx` to a spawned thread and sending
@@ -93,7 +93,7 @@ end of the river or like getting a chat message.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-08/src/main.rs}}
+{{#rustdoc_include ./listings/ch16-fearless-concurrency/listing-16-08/src/main.rs}}
 ```
 
 <span class="caption">Listing 16-8: Receiving the value “hi” in the main thread
@@ -144,7 +144,7 @@ this code isn’t allowed:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-09/src/main.rs}}
+{{#rustdoc_include ./listings/ch16-fearless-concurrency/listing-16-09/src/main.rs}}
 ```
 
 <span class="caption">Listing 16-9: Attempting to use `val` after we’ve sent it
@@ -158,7 +158,7 @@ unexpected results due to inconsistent or nonexistent data. However, Rust gives
 us an error if we try to compile the code in Listing 16-9:
 
 ```console
-{{#include ../listings/ch16-fearless-concurrency/listing-16-09/output.txt}}
+{{#include ./listings/ch16-fearless-concurrency/listing-16-09/output.txt}}
 ```
 
 Our concurrency mistake has caused a compile time error. The `send` function
@@ -177,7 +177,7 @@ pause for a second between each message.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-10/src/main.rs}}
+{{#rustdoc_include ./listings/ch16-fearless-concurrency/listing-16-10/src/main.rs}}
 ```
 
 <span class="caption">Listing 16-10: Sending multiple messages and pausing
@@ -220,7 +220,7 @@ so by cloning the transmitting half of the channel, as shown in Listing 16-11:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-11/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch16-fearless-concurrency/listing-16-11/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 16-11: Sending multiple messages from multiple

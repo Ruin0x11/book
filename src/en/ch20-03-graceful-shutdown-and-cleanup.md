@@ -24,7 +24,7 @@ quite work yet.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-22/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-22/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 20-22: Joining each thread when the thread pool
@@ -40,7 +40,7 @@ into an ungraceful shutdown.
 Here is the error we get when we compile this code:
 
 ```console
-{{#include ../listings/ch20-web-server/listing-20-22/output.txt}}
+{{#include ./listings/ch20-web-server/listing-20-22/output.txt}}
 ```
 
 The error tells us we can’t call `join` because we only have a mutable borrow
@@ -59,14 +59,14 @@ So we know we want to update the definition of `Worker` like this:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch20-web-server/no-listing-04-update-worker-definition/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/no-listing-04-update-worker-definition/src/lib.rs:here}}
 ```
 
 Now let’s lean on the compiler to find the other places that need to change.
 Checking this code, we get two errors:
 
 ```console
-{{#include ../listings/ch20-web-server/no-listing-04-update-worker-definition/output.txt}}
+{{#include ./listings/ch20-web-server/no-listing-04-update-worker-definition/output.txt}}
 ```
 
 Let’s address the second error, which points to the code at the end of
@@ -76,7 +76,7 @@ new `Worker`. Make the following changes to fix this error:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch20-web-server/no-listing-05-fix-worker-new/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/no-listing-05-fix-worker-new/src/lib.rs:here}}
 ```
 
 The first error is in our `Drop` implementation. We mentioned earlier that we
@@ -86,7 +86,7 @@ The following changes will do so:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch20-web-server/no-listing-06-fix-threadpool-drop/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/no-listing-06-fix-threadpool-drop/src/lib.rs:here}}
 ```
 
 As discussed in Chapter 17, the `take` method on `Option` takes the `Some`
@@ -113,7 +113,7 @@ variants.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch20-web-server/no-listing-07-define-message-enum/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/no-listing-07-define-message-enum/src/lib.rs:here}}
 ```
 
 This `Message` enum will either be a `NewJob` variant that holds the `Job` the
@@ -126,7 +126,7 @@ We need to adjust the channel to use values of type `Message` rather than type
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-23/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-23/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 20-23: Sending and receiving `Message` values and
@@ -148,7 +148,7 @@ changing our `Drop` implementation to look like Listing 20-24.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-24/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-24/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 20-24: Sending `Message::Terminate` to the
@@ -182,7 +182,7 @@ before gracefully shutting down the server, as shown in Listing 20-25.
 <span class="filename">Filename: src/bin/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-25/src/bin/main.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-25/src/bin/main.rs:here}}
 ```
 
 <span class="caption">Listing 20-25: Shut down the server after serving two
@@ -256,13 +256,13 @@ Here’s the full code for reference:
 <span class="filename">Filename: src/bin/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-25/src/bin/main.rs:all}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-25/src/bin/main.rs:all}}
 ```
 
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch20-web-server/listing-20-25/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch20-web-server/listing-20-25/src/lib.rs:here}}
 ```
 
 We could do more here! If you want to continue enhancing this project, here are

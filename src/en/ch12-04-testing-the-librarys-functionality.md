@@ -41,7 +41,7 @@ yet.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-15/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-15/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 12-15: Creating a failing test for the `search`
@@ -61,7 +61,7 @@ containing the line `"safe, fast, productive."`
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-16/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-16/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 12-16: Defining just enough of the `search`
@@ -86,7 +86,7 @@ If we forget the lifetime annotations and try to compile this function, we’ll
 get this error:
 
 ```console
-{{#include ../listings/ch12-an-io-project/output-only-02-missing-lifetimes/output.txt}}
+{{#include ./listings/ch12-an-io-project/output-only-02-missing-lifetimes/output.txt}}
 ```
 
 Rust can’t possibly know which of the two arguments we need, so we need to tell
@@ -103,7 +103,7 @@ References with Lifetimes”][validating-references-with-lifetimes]<!-- ignore
 Now let’s run the test:
 
 ```console
-{{#include ../listings/ch12-an-io-project/listing-12-16/output.txt}}
+{{#include ./listings/ch12-an-io-project/listing-12-16/output.txt}}
 ```
 
 Great, the test fails, exactly as we expected. Let’s get the test to pass!
@@ -130,7 +130,7 @@ won’t compile yet.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-17/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-17/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 12-17: Iterating through each line in `contents`
@@ -151,7 +151,7 @@ Listing 12-18. Note this still won’t compile yet.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-18/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-18/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 12-18: Adding functionality to see whether the
@@ -167,7 +167,7 @@ shown in Listing 12-19.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-19/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-19/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 12-19: Storing the lines that match so we can
@@ -177,7 +177,7 @@ Now the `search` function should return only the lines that contain `query`,
 and our test should pass. Let’s run the test:
 
 ```console
-{{#include ../listings/ch12-an-io-project/listing-12-19/output.txt}}
+{{#include ./listings/ch12-an-io-project/listing-12-19/output.txt}}
 ```
 
 Our test passed, so we know it works!
@@ -199,7 +199,7 @@ will print each line returned from `search`:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch12-an-io-project/no-listing-02-using-search-in-run/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/no-listing-02-using-search-in-run/src/lib.rs:here}}
 ```
 
 We’re still using a `for` loop to return each line from `search` and print it.
@@ -208,20 +208,20 @@ Now the entire program should work! Let’s try it out, first with a word that
 should return exactly one line from the Emily Dickinson poem, “frog”:
 
 ```console
-{{#include ../listings/ch12-an-io-project/no-listing-02-using-search-in-run/output.txt}}
+{{#include ./listings/ch12-an-io-project/no-listing-02-using-search-in-run/output.txt}}
 ```
 
 Cool! Now let’s try a word that will match multiple lines, like “body”:
 
 ```console
-{{#include ../listings/ch12-an-io-project/output-only-03-multiple-matches/output.txt}}
+{{#include ./listings/ch12-an-io-project/output-only-03-multiple-matches/output.txt}}
 ```
 
 And finally, let’s make sure that we don’t get any lines when we search for a
 word that isn’t anywhere in the poem, such as “monomorphization”:
 
 ```console
-{{#include ../listings/ch12-an-io-project/output-only-04-no-matches/output.txt}}
+{{#include ./listings/ch12-an-io-project/output-only-04-no-matches/output.txt}}
 ```
 
 Excellent! We’ve built our own mini version of a classic tool and learned a lot

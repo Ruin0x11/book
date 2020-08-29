@@ -76,13 +76,13 @@ A consequence of the borrowing rules is that when you have an immutable value,
 you can’t borrow it mutably. For example, this code won’t compile:
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch15-smart-pointers/no-listing-01-cant-borrow-immutable-as-mutable/src/main.rs}}
+{{#rustdoc_include ./listings/ch15-smart-pointers/no-listing-01-cant-borrow-immutable-as-mutable/src/main.rs}}
 ```
 
 If you tried to compile this code, you’d get the following error:
 
 ```console
-{{#include ../listings/ch15-smart-pointers/no-listing-01-cant-borrow-immutable-as-mutable/output.txt}}
+{{#include ./listings/ch15-smart-pointers/no-listing-01-cant-borrow-immutable-as-mutable/output.txt}}
 ```
 
 However, there are situations in which it would be useful for a value to mutate
@@ -125,7 +125,7 @@ called `Messenger`. Listing 15-20 shows the library code:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-20/src/lib.rs}}
+{{#rustdoc_include ./listings/ch15-smart-pointers/listing-15-20/src/lib.rs}}
 ```
 
 <span class="caption">Listing 15-20: A library to keep track of how close a
@@ -152,7 +152,7 @@ implement a mock object to do just that, but the borrow checker won’t allow it
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-21/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch15-smart-pointers/listing-15-21/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 15-21: An attempt to implement a `MockMessenger`
@@ -179,7 +179,7 @@ of should now have one message in it.
 However, there’s one problem with this test, as shown here:
 
 ```text
-{{#include ../listings/ch15-smart-pointers/listing-15-21/output.txt}}
+{{#include ./listings/ch15-smart-pointers/listing-15-21/output.txt}}
 ```
 
 We can’t modify the `MockMessenger` to keep track of the messages, because the
@@ -196,7 +196,7 @@ shows what that looks like:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-22/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch15-smart-pointers/listing-15-22/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 15-22: Using `RefCell<T>` to mutate an inner
@@ -245,7 +245,7 @@ at runtime.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust,ignore,panics
-{{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-23/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch15-smart-pointers/listing-15-23/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 15-23: Creating two mutable references in the
@@ -258,7 +258,7 @@ which isn’t allowed. When we run the tests for our library, the code in Listin
 15-23 will compile without any errors, but the test will fail:
 
 ```console
-{{#include ../listings/ch15-smart-pointers/listing-15-23/output.txt}}
+{{#include ./listings/ch15-smart-pointers/listing-15-23/output.txt}}
 ```
 
 Notice that the code panicked with the message `already borrowed:
@@ -293,7 +293,7 @@ the lists:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-24/src/main.rs}}
+{{#rustdoc_include ./listings/ch15-smart-pointers/listing-15-24/src/main.rs}}
 ```
 
 <span class="caption">Listing 15-24: Using `Rc<RefCell<i32>>` to create a
@@ -321,7 +321,7 @@ When we print `a`, `b`, and `c`, we can see that they all have the modified
 value of 15 rather than 5:
 
 ```console
-{{#include ../listings/ch15-smart-pointers/listing-15-24/output.txt}}
+{{#include ./listings/ch15-smart-pointers/listing-15-24/output.txt}}
 ```
 
 This technique is pretty neat! By using `RefCell<T>`, we have an outwardly

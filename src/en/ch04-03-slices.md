@@ -23,7 +23,7 @@ end of the word. Let’s try that, as shown in Listing 4-7.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-07/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/listing-04-07/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 4-7: The `first_word` function that returns a
@@ -34,13 +34,13 @@ a value is a space, we’ll convert our `String` to an array of bytes using the
 `as_bytes` method:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-07/src/main.rs:as_bytes}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/listing-04-07/src/main.rs:as_bytes}}
 ```
 
 Next, we create an iterator over the array of bytes using the `iter` method:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-07/src/main.rs:iter}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/listing-04-07/src/main.rs:iter}}
 ```
 
 We’ll discuss iterators in more detail in Chapter 13. For now, know that `iter`
@@ -61,7 +61,7 @@ using the byte literal syntax. If we find a space, we return the position.
 Otherwise, we return the length of the string by using `s.len()`:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-07/src/main.rs:inside_for}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/listing-04-07/src/main.rs:inside_for}}
 ```
 
 We now have a way to find out the index of the end of the first word in the
@@ -74,7 +74,7 @@ uses the `first_word` function from Listing 4-7.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-08/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/listing-04-08/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 4-8: Storing the result from calling the
@@ -106,7 +106,7 @@ Luckily, Rust has a solution to this problem: string slices.
 A *string slice* is a reference to part of a `String`, and it looks like this:
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-17-slice/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-17-slice/src/main.rs:here}}
 ```
 
 This is similar to taking a reference to the whole `String` but with the extra
@@ -175,7 +175,7 @@ slice. The type that signifies “string slice” is written as `&str`:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-18-first-word-slice/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-18-first-word-slice/src/main.rs:here}}
 ```
 
 We get the index for the end of the word in the same way as we did in Listing
@@ -206,13 +206,13 @@ compile-time error:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-19-slice-error/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-19-slice-error/src/main.rs:here}}
 ```
 
 Here’s the compiler error:
 
 ```console
-{{#include ../listings/ch04-understanding-ownership/no-listing-19-slice-error/output.txt}}
+{{#include ./listings/ch04-understanding-ownership/no-listing-19-slice-error/output.txt}}
 ```
 
 Recall from the borrowing rules that if we have an immutable reference to
@@ -248,7 +248,7 @@ instead because it allows us to use the same function on both `&String` values
 and `&str` values.
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-09/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/listing-04-09/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 4-9: Improving the `first_word` function by using
@@ -262,7 +262,7 @@ without losing any functionality:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-09/src/main.rs:usage}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/listing-04-09/src/main.rs:usage}}
 ```
 
 ### Other Slices

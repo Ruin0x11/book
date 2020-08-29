@@ -41,7 +41,7 @@ command line arguments passed to it and then collect the values into a vector.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-01/src/main.rs}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-01/src/main.rs}}
 ```
 
 <span class="caption">Listing 12-1: Collecting the command line arguments into
@@ -78,11 +78,11 @@ Finally, we print the vector using the debug formatter, `:?`. Let’s try runnin
 the code first with no arguments and then with two arguments:
 
 ```console
-{{#include ../listings/ch12-an-io-project/listing-12-01/output.txt}}
+{{#include ./listings/ch12-an-io-project/listing-12-01/output.txt}}
 ```
 
 ```console
-{{#include ../listings/ch12-an-io-project/output-only-01-with-args/output.txt}}
+{{#include ./listings/ch12-an-io-project/output-only-01-with-args/output.txt}}
 ```
 
 Notice that the first value in the vector is `"target/debug/minigrep"`, which
@@ -103,7 +103,7 @@ throughout the rest of the program. We do that in Listing 12-2.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,should_panic
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-02/src/main.rs}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-02/src/main.rs}}
 ```
 
 <span class="caption">Listing 12-2: Creating variables to hold the query
@@ -121,7 +121,7 @@ working as we intend. Let’s run this program again with the arguments `test`
 and `sample.txt`:
 
 ```console
-{{#include ../listings/ch12-an-io-project/listing-12-02/output.txt}}
+{{#include ./listings/ch12-an-io-project/listing-12-02/output.txt}}
 ```
 
 Great, the program is working! The values of the arguments we need are being

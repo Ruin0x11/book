@@ -18,7 +18,7 @@ both find the largest value in a slice.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-04/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-04/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 10-4: Two functions that differ only in their
@@ -60,7 +60,7 @@ compile yet, but we’ll fix it later in this chapter.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-05/src/main.rs}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-05/src/main.rs}}
 ```
 
 <span class="caption">Listing 10-5: A definition of the `largest` function that
@@ -69,7 +69,7 @@ uses generic type parameters but doesn’t compile yet</span>
 If we compile this code right now, we’ll get this error:
 
 ```console
-{{#include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-05/output.txt}}
+{{#include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-05/output.txt}}
 ```
 
 The note mentions `std::cmp::PartialOrd`, which is a *trait*. We’ll talk about
@@ -92,7 +92,7 @@ struct to hold `x` and `y` coordinate values of any type.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-06/src/main.rs}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-06/src/main.rs}}
 ```
 
 <span class="caption">Listing 10-6: A `Point<T>` struct that holds `x` and `y`
@@ -113,7 +113,7 @@ Listing 10-7, our code won’t compile.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-07/src/main.rs}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-07/src/main.rs}}
 ```
 
 <span class="caption">Listing 10-7: The fields `x` and `y` must be the same
@@ -125,7 +125,7 @@ compiler know that the generic type `T` will be an integer for this instance of
 same type as `x`, we’ll get a type mismatch error like this:
 
 ```console
-{{#include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-07/output.txt}}
+{{#include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-07/output.txt}}
 ```
 
 To define a `Point` struct where `x` and `y` are both generics but could have
@@ -136,7 +136,7 @@ Listing 10-8, we can change the definition of `Point` to be generic over types
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-08/src/main.rs}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-08/src/main.rs}}
 ```
 
 <span class="caption">Listing 10-8: A `Point<T, U>` generic over two types so
@@ -199,7 +199,7 @@ struct we defined in Listing 10-6 with a method named `x` implemented on it.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-09/src/main.rs}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-09/src/main.rs}}
 ```
 
 <span class="caption">Listing 10-9: Implementing a method named `x` on the
@@ -221,7 +221,7 @@ concrete type `f32`, meaning we don’t declare any types after `impl`.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-10/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-10/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 10-10: An `impl` block that only applies to a
@@ -244,7 +244,7 @@ value from the passed-in `Point` (of type `W`).
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-11/src/main.rs}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-11/src/main.rs}}
 ```
 
 <span class="caption">Listing 10-11: A method that uses different generic types

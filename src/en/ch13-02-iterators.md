@@ -12,7 +12,7 @@ the `iter` method defined on `Vec<T>`. This code by itself doesn’t do anything
 useful.
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-13/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-13/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 13-13: Creating an iterator</span>
@@ -28,7 +28,7 @@ called using the iterator in `v1_iter`, each element in the iterator is used in
 one iteration of the loop, which prints out each value.
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-14/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-14/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 13-14: Using an iterator in a `for` loop</span>
@@ -78,7 +78,7 @@ from the vector.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-15/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-15/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 13-15: Calling the `next` method on an
@@ -117,7 +117,7 @@ test illustrating a use of the `sum` method:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-16/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-16/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 13-16: Calling the `sum` method to get the total
@@ -142,7 +142,7 @@ incremented by 1. However, this code produces a warning:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,not_desired_behavior
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-17/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-17/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 13-17: Calling the iterator adaptor `map` to
@@ -151,7 +151,7 @@ create a new iterator</span>
 The warning we get is this:
 
 ```console
-{{#include ../listings/ch13-functional-features/listing-13-17/output.txt}}
+{{#include ./listings/ch13-functional-features/listing-13-17/output.txt}}
 ```
 
 The code in Listing 13-17 doesn’t do anything; the closure we’ve specified
@@ -169,7 +169,7 @@ containing each item from the original vector incremented by 1.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-18/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-18/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 13-18: Calling the `map` method to create a new
@@ -197,7 +197,7 @@ instances. It will return only shoes that are the specified size.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-19/src/lib.rs}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-19/src/lib.rs}}
 ```
 
 <span class="caption">Listing 13-19: Using the `filter` method with a closure
@@ -242,7 +242,7 @@ Listing 13-20 has the definition of the `Counter` struct and an associated
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-20/src/lib.rs}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-20/src/lib.rs}}
 ```
 
 <span class="caption">Listing 13-20: Defining the `Counter` struct and a `new`
@@ -262,7 +262,7 @@ iterator is used, as shown in Listing 13-21:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-21/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-21/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 13-21: Implementing the `Iterator` trait on our
@@ -288,7 +288,7 @@ with the iterator created from a vector in Listing 13-15.
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-22/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-22/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 13-22: Testing the functionality of the `next`
@@ -313,7 +313,7 @@ together, we could do so, as shown in the test in Listing 13-23:
 <span class="filename">Filename: src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch13-functional-features/listing-13-23/src/lib.rs:here}}
+{{#rustdoc_include ./listings/ch13-functional-features/listing-13-23/src/lib.rs:here}}
 ```
 
 <span class="caption">Listing 13-23: Using a variety of `Iterator` trait

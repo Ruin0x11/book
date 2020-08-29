@@ -19,7 +19,7 @@ listing the possible kinds an IP address can be, `V4` and `V6`. These are the
 variants of the enum:
 
 ```rust
-{{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-01-defining-enums/src/main.rs:def}}
+{{#rustdoc_include ./listings/ch06-enums-and-pattern-matching/no-listing-01-defining-enums/src/main.rs:def}}
 ```
 
 `IpAddrKind` is now a custom data type that we can use elsewhere in our code.
@@ -29,7 +29,7 @@ variants of the enum:
 We can create instances of each of the two variants of `IpAddrKind` like this:
 
 ```rust
-{{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-01-defining-enums/src/main.rs:instance}}
+{{#rustdoc_include ./listings/ch06-enums-and-pattern-matching/no-listing-01-defining-enums/src/main.rs:instance}}
 ```
 
 Note that the variants of the enum are namespaced under its identifier, and we
@@ -39,13 +39,13 @@ both values `IpAddrKind::V4` and `IpAddrKind::V6` are of the same type:
 `IpAddrKind`:
 
 ```rust
-{{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-01-defining-enums/src/main.rs:fn}}
+{{#rustdoc_include ./listings/ch06-enums-and-pattern-matching/no-listing-01-defining-enums/src/main.rs:fn}}
 ```
 
 And we can call this function with either variant:
 
 ```rust
-{{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-01-defining-enums/src/main.rs:fn_call}}
+{{#rustdoc_include ./listings/ch06-enums-and-pattern-matching/no-listing-01-defining-enums/src/main.rs:fn_call}}
 ```
 
 Using enums has even more advantages. Thinking more about our IP address type,
@@ -54,7 +54,7 @@ only know what *kind* it is. Given that you just learned about structs in
 Chapter 5, you might tackle this problem as shown in Listing 6-1.
 
 ```rust
-{{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-01/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch06-enums-and-pattern-matching/listing-06-01/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 6-1: Storing the data and `IpAddrKind` variant of
@@ -75,7 +75,7 @@ variant. This new definition of the `IpAddr` enum says that both `V4` and `V6`
 variants will have associated `String` values:
 
 ```rust
-{{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-02-enum-with-data/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch06-enums-and-pattern-matching/no-listing-02-enum-with-data/src/main.rs:here}}
 ```
 
 We attach data to each variant of the enum directly, so there is no need for an
@@ -89,7 +89,7 @@ still express `V6` addresses as one `String` value, we wouldn’t be able to wit
 a struct. Enums handle this case with ease:
 
 ```rust
-{{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-03-variants-with-different-data/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch06-enums-and-pattern-matching/no-listing-03-variants-with-different-data/src/main.rs:here}}
 ```
 
 We’ve shown several different ways to define data structures to store version
@@ -132,7 +132,7 @@ Let’s look at another example of an enum in Listing 6-2: this one has a wide
 variety of types embedded in its variants.
 
 ```rust
-{{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-02/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch06-enums-and-pattern-matching/listing-06-02/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 6-2: A `Message` enum whose variants each store
@@ -152,7 +152,7 @@ type. The following structs could hold the same data that the preceding enum
 variants hold:
 
 ```rust
-{{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-04-structs-similar-to-message-enum/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch06-enums-and-pattern-matching/no-listing-04-structs-similar-to-message-enum/src/main.rs:here}}
 ```
 
 But if we used the different structs, which each have their own type, we
@@ -164,7 +164,7 @@ define methods on structs using `impl`, we’re also able to define methods on
 enums. Here’s a method named `call` that we could define on our `Message` enum:
 
 ```rust
-{{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-05-methods-on-enums/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch06-enums-and-pattern-matching/no-listing-05-methods-on-enums/src/main.rs:here}}
 ```
 
 The body of the method would use `self` to get the value that we called the
@@ -240,7 +240,7 @@ For now, all you need to know is that `<T>` means the `Some` variant of the
 using `Option` values to hold number types and string types:
 
 ```rust
-{{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-06-option-examples/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch06-enums-and-pattern-matching/no-listing-06-option-examples/src/main.rs:here}}
 ```
 
 If we use `None` rather than `Some`, we need to tell Rust what type of
@@ -258,13 +258,13 @@ definitely a valid value. For example, this code won’t compile because it’s
 trying to add an `i8` to an `Option<i8>`:
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-07-cant-use-option-directly/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch06-enums-and-pattern-matching/no-listing-07-cant-use-option-directly/src/main.rs:here}}
 ```
 
 If we run this code, we get an error message like this:
 
 ```console
-{{#include ../listings/ch06-enums-and-pattern-matching/no-listing-07-cant-use-option-directly/output.txt}}
+{{#include ./listings/ch06-enums-and-pattern-matching/no-listing-07-cant-use-option-directly/output.txt}}
 ```
 
 Intense! In effect, this error message means that Rust doesn’t understand how

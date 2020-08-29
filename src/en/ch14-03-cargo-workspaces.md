@@ -34,7 +34,7 @@ that path is *adder*:
 <span class="filename">Filename: Cargo.toml</span>
 
 ```toml
-{{#include ../listings/ch14-more-about-cargo/no-listing-01-workspace-with-adder-crate/add/Cargo.toml}}
+{{#include ./listings/ch14-more-about-cargo/no-listing-01-workspace-with-adder-crate/add/Cargo.toml}}
 ```
 
 Next, we’ll create the `adder` binary crate by running `cargo new` within the
@@ -85,7 +85,7 @@ Change the top-level *Cargo.toml* to specify the *add-one* path in the
 <span class="filename">Filename: Cargo.toml</span>
 
 ```toml
-{{#include ../listings/ch14-more-about-cargo/no-listing-02-workspace-with-two-crates/add/Cargo.toml}}
+{{#include ./listings/ch14-more-about-cargo/no-listing-02-workspace-with-two-crates/add/Cargo.toml}}
 ```
 
 Then generate a new library crate named `add-one`:
@@ -123,7 +123,7 @@ In the *add-one/src/lib.rs* file, let’s add an `add_one` function:
 <span class="filename">Filename: add-one/src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch14-more-about-cargo/no-listing-02-workspace-with-two-crates/add/add-one/src/lib.rs}}
+{{#rustdoc_include ./listings/ch14-more-about-cargo/no-listing-02-workspace-with-two-crates/add/add-one/src/lib.rs}}
 ```
 
 Now that we have another package in the workspace, we can have the `adder`
@@ -134,7 +134,7 @@ library. First, we’ll need to add a path dependency on `add-one` to
 <span class="filename">Filename: adder/Cargo.toml</span>
 
 ```toml
-{{#include ../listings/ch14-more-about-cargo/no-listing-02-workspace-with-two-crates/add/adder/Cargo.toml:7:9}}
+{{#include ./listings/ch14-more-about-cargo/no-listing-02-workspace-with-two-crates/add/adder/Cargo.toml:7:9}}
 ```
 
 Cargo doesn’t assume that crates in a workspace will depend on each other, so
@@ -148,7 +148,7 @@ function to call the `add_one` function, as in Listing 14-7.
 <span class="filename">Filename: adder/src/main.rs</span>
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch14-more-about-cargo/listing-14-07/add/adder/src/main.rs}}
+{{#rustdoc_include ./listings/ch14-more-about-cargo/listing-14-07/add/adder/src/main.rs}}
 ```
 
 <span class="caption">Listing 14-7: Using the `add-one` library crate from the 
@@ -211,7 +211,7 @@ crate:
 <span class="filename">Filename: add-one/Cargo.toml</span>
 
 ```toml
-{{#include ../listings/ch14-more-about-cargo/no-listing-03-workspace-with-external-dependency/add/add-one/Cargo.toml:7:8}}
+{{#include ./listings/ch14-more-about-cargo/no-listing-03-workspace-with-external-dependency/add/add-one/Cargo.toml:7:8}}
 ```
 
 We can now add `use rand;` to the *add-one/src/lib.rs* file, and building the
@@ -275,7 +275,7 @@ within the `add_one` crate:
 <span class="filename">Filename: add-one/src/lib.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch14-more-about-cargo/no-listing-04-workspace-with-tests/add/add-one/src/lib.rs}}
+{{#rustdoc_include ./listings/ch14-more-about-cargo/no-listing-04-workspace-with-tests/add/add-one/src/lib.rs}}
 ```
 
 Now run `cargo test` in the top-level *add* directory:

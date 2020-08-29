@@ -13,7 +13,7 @@ the pieces of data, which we call *fields*. For example, Listing 5-1 shows a
 struct that stores information about a user account.
 
 ```rust
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-01/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/listing-05-01/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 5-1: A `User` struct definition</span>
@@ -29,7 +29,7 @@ in that template with particular data to create values of the type. For
 example, we can declare a particular user as shown in Listing 5-2.
 
 ```rust
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-02/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/listing-05-02/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 5-2: Creating an instance of the `User`
@@ -42,7 +42,7 @@ the dot notation and assigning into a particular field. Listing 5-3 shows how
 to change the value in the `email` field of a mutable `User` instance.
 
 ```rust
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-03/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/listing-05-03/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 5-3: Changing the value in the `email` field of a
@@ -58,7 +58,7 @@ the given email and username. The `active` field gets the value of `true`, and
 the `sign_in_count` gets a value of `1`.
 
 ```rust
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-04/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/listing-05-04/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 5-4: A `build_user` function that takes an email
@@ -77,7 +77,7 @@ Listing 5-4, we can use the *field init shorthand* syntax to rewrite
 repetition of `email` and `username`, as shown in Listing 5-5.
 
 ```rust
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-05/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/listing-05-05/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 5-5: A `build_user` function that uses field init
@@ -100,7 +100,7 @@ the update syntax. We set new values for `email` and `username` but otherwise
 use the same values from `user1` that we created in Listing 5-2.
 
 ```rust
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-06/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/listing-05-06/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 5-6: Creating a new `User` instance using some of
@@ -111,7 +111,7 @@ shown in Listing 5-7. The syntax `..` specifies that the remaining fields not
 explicitly set should have the same value as the fields in the given instance.
 
 ```rust
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-07/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/listing-05-07/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 5-7: Using struct update syntax to set new
@@ -136,7 +136,7 @@ followed by the types in the tuple. For example, here are definitions and
 usages of two tuple structs named `Color` and `Point`:
 
 ```rust
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/no-listing-01-tuple-structs/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/no-listing-01-tuple-structs/src/main.rs:here}}
 ```
 
 Note that the `black` and `origin` values are different types, because they’re

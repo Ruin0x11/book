@@ -12,7 +12,7 @@ To create a new, empty vector, we can call the `Vec::new` function, as shown in
 Listing 8-1.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-01/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-01/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-1: Creating a new, empty vector to hold values
@@ -37,7 +37,7 @@ the default integer type, as we discussed in the [“Data Types”][data-types]<
 ignore --> section of Chapter 3.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-02/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-02/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-2: Creating a new vector containing
@@ -53,7 +53,7 @@ To create a vector and then add elements to it, we can use the `push` method,
 as shown in Listing 8-3.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-03/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-03/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-3: Using the `push` method to add values to a
@@ -70,7 +70,7 @@ Like any other `struct`, a vector is freed when it goes out of scope, as
 annotated in Listing 8-4.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-04/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-04/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-4: Showing where the vector and its elements
@@ -92,7 +92,7 @@ Listing 8-5 shows both methods of accessing a value in a vector, either with
 indexing syntax or the `get` method.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-05/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-05/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-5: Using indexing syntax or the `get` method to
@@ -111,7 +111,7 @@ that holds five elements and then tries to access an element at index 100, as
 shown in Listing 8-6.
 
 ```rust,should_panic,panics
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-06/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-06/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-6: Attempting to access the element at index
@@ -141,7 +141,7 @@ the first element in a vector and try to add an element to the end, which won’
 work if we also try to refer to that element later in the function:
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-07/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-07/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-7: Attempting to add an element to a vector
@@ -150,7 +150,7 @@ while holding a reference to an item</span>
 Compiling this code will result in this error:
 
 ```console
-{{#include ../listings/ch08-common-collections/listing-08-07/output.txt}}
+{{#include ./listings/ch08-common-collections/listing-08-07/output.txt}}
 ```
 
 The code in Listing 8-7 might look like it should work: why should a reference
@@ -173,7 +173,7 @@ all of the elements rather than use indices to access one at a time. Listing
 in a vector of `i32` values and print them.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-08/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-08/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-8: Printing each element in a vector by
@@ -184,7 +184,7 @@ in order to make changes to all the elements. The `for` loop in Listing 8-9
 will add `50` to each element.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-09/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-09/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-9: Iterating over mutable references to
@@ -212,7 +212,7 @@ that of the enum. Then we can create a vector that holds that enum and so,
 ultimately, holds different types. We’ve demonstrated this in Listing 8-10.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-10/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-10/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-10: Defining an `enum` to store values of

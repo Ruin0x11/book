@@ -11,7 +11,7 @@ Who are you?”
 <span class="filename">Filename: poem.txt</span>
 
 ```text
-{{#include ../listings/ch12-an-io-project/listing-12-03/poem.txt}}
+{{#include ./listings/ch12-an-io-project/listing-12-03/poem.txt}}
 ```
 
 <span class="caption">Listing 12-3: A poem by Emily Dickinson makes a good test
@@ -23,7 +23,7 @@ shown in Listing 12-4.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,should_panic
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-04/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-04/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 12-4: Reading the contents of the file specified
@@ -45,7 +45,7 @@ we haven’t implemented the searching part yet) and the *poem.txt* file as the
 second argument:
 
 ```console
-{{#rustdoc_include ../listings/ch12-an-io-project/listing-12-04/output.txt}}
+{{#rustdoc_include ./listings/ch12-an-io-project/listing-12-04/output.txt}}
 ```
 
 Great! The code read and then printed the contents of the file. But the code

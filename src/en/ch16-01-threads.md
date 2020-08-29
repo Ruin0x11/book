@@ -71,7 +71,7 @@ thread and other text from a new thread:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-01/src/main.rs}}
+{{#rustdoc_include ./listings/ch16-fearless-concurrency/listing-16-01/src/main.rs}}
 ```
 
 <span class="caption">Listing 16-1: Creating a new thread to print one thing
@@ -128,7 +128,7 @@ in Listing 16-1 and call `join` to make sure the spawned thread finishes before
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-02/src/main.rs}}
+{{#rustdoc_include ./listings/ch16-fearless-concurrency/listing-16-02/src/main.rs}}
 ```
 
 <span class="caption">Listing 16-2: Saving a `JoinHandle` from `thread::spawn`
@@ -169,7 +169,7 @@ But let’s see what happens when we instead move `handle.join()` before the
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch16-fearless-concurrency/no-listing-01-join-too-early/src/main.rs}}
+{{#rustdoc_include ./listings/ch16-fearless-concurrency/no-listing-01-join-too-early/src/main.rs}}
 ```
 
 The main thread will wait for the spawned thread to finish and then run its
@@ -218,7 +218,7 @@ thread. However, this won’t yet work, as you’ll see in a moment.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-03/src/main.rs}}
+{{#rustdoc_include ./listings/ch16-fearless-concurrency/listing-16-03/src/main.rs}}
 ```
 
 <span class="caption">Listing 16-3: Attempting to use a vector created by the
@@ -230,7 +230,7 @@ should be able to access `v` inside that new thread. But when we compile this
 example, we get the following error:
 
 ```console
-{{#include ../listings/ch16-fearless-concurrency/listing-16-03/output.txt}}
+{{#include ./listings/ch16-fearless-concurrency/listing-16-03/output.txt}}
 ```
 
 Rust *infers* how to capture `v`, and because `println!` only needs a reference
@@ -244,7 +244,7 @@ that won’t be valid:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-04/src/main.rs}}
+{{#rustdoc_include ./listings/ch16-fearless-concurrency/listing-16-04/src/main.rs}}
 ```
 
 <span class="caption">Listing 16-4: A thread with a closure that attempts to
@@ -279,7 +279,7 @@ should borrow the values. The modification to Listing 16-3 shown in Listing
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-05/src/main.rs}}
+{{#rustdoc_include ./listings/ch16-fearless-concurrency/listing-16-05/src/main.rs}}
 ```
 
 <span class="caption">Listing 16-5: Using the `move` keyword to force a closure
@@ -293,7 +293,7 @@ would move `v` into the closure’s environment, and we could no longer call
 `drop` on it in the main thread. We would get this compiler error instead:
 
 ```console
-{{#include ../listings/ch16-fearless-concurrency/output-only-01-move-drop/output.txt}}
+{{#include ./listings/ch16-fearless-concurrency/output-only-01-move-drop/output.txt}}
 ```
 
 Rust’s ownership rules have saved us again! We got an error from the code in

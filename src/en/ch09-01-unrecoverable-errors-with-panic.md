@@ -29,13 +29,13 @@ Let’s try calling `panic!` in a simple program:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,should_panic,panics
-{{#rustdoc_include ../listings/ch09-error-handling/no-listing-01-panic/src/main.rs}}
+{{#rustdoc_include ./listings/ch09-error-handling/no-listing-01-panic/src/main.rs}}
 ```
 
 When you run the program, you’ll see something like this:
 
 ```console
-{{#include ../listings/ch09-error-handling/no-listing-01-panic/output.txt}}
+{{#include ./listings/ch09-error-handling/no-listing-01-panic/output.txt}}
 ```
 
 The call to `panic!` causes the error message contained in the last two lines.
@@ -62,7 +62,7 @@ element by index in a vector.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,should_panic,panics
-{{#rustdoc_include ../listings/ch09-error-handling/listing-09-01/src/main.rs}}
+{{#rustdoc_include ./listings/ch09-error-handling/listing-09-01/src/main.rs}}
 ```
 
 <span class="caption">Listing 9-1: Attempting to access an element beyond the
@@ -87,7 +87,7 @@ element at an index that doesn’t exist, Rust will stop execution and refuse to
 continue. Let’s try it and see:
 
 ```console
-{{#include ../listings/ch09-error-handling/listing-09-01/output.txt}}
+{{#include ./listings/ch09-error-handling/listing-09-01/output.txt}}
 ```
 
 This error points at a file we didn’t write, *libcore/slice/mod.rs*. That’s the

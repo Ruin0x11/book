@@ -41,7 +41,7 @@ Listing 10-1.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-01/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-01/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 10-1: Code to find the largest number in a list
@@ -63,7 +63,7 @@ program, as shown in Listing 10-2.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-02/src/main.rs}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-02/src/main.rs}}
 ```
 
 <span class="caption">Listing 10-2: Code to find the largest number in *two*
@@ -85,7 +85,7 @@ number in two different lists.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-03/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch10-generic-types-traits-and-lifetimes/listing-10-03/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 10-3: Abstracted code to find the largest number

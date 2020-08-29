@@ -25,7 +25,7 @@ Blue and Yellow. The Blue team starts with 10 points, and the Yellow team
 starts with 50.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-20/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-20/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-20: Creating a new hash map and inserting some
@@ -54,7 +54,7 @@ could use the `collect` method to turn that vector of tuples into a hash map,
 as shown in Listing 8-21.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-21/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-21/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-21: Creating a hash map from a list of teams
@@ -75,7 +75,7 @@ into the hash map. For owned values like `String`, the values will be moved and
 the hash map will be the owner of those values, as demonstrated in Listing 8-22.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-22/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-22/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-22: Showing that keys and values are owned by
@@ -97,7 +97,7 @@ We can get a value out of the hash map by providing its key to the `get`
 method, as shown in Listing 8-23.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-23/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-23/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-23: Accessing the score for the Blue team
@@ -113,7 +113,7 @@ We can iterate over each key/value pair in a hash map in a similar manner as we
 do with vectors, using a `for` loop:
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/no-listing-03-iterate-over-hashmap/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/no-listing-03-iterate-over-hashmap/src/main.rs:here}}
 ```
 
 This code will print each pair in an arbitrary order:
@@ -143,7 +143,7 @@ only contain one key/value pair because we’re inserting the value for the Blue
 team’s key both times.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-24/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-24/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-24: Replacing a value stored with a particular
@@ -164,7 +164,7 @@ and the same for the Blue team. Using the `entry` API, the code looks like
 Listing 8-25.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-25/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-25/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-25: Using the `entry` method to only insert if
@@ -192,7 +192,7 @@ seen that word. If it’s the first time we’ve seen a word, we’ll first inse
 the value 0.
 
 ```rust
-{{#rustdoc_include ../listings/ch08-common-collections/listing-08-26/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch08-common-collections/listing-08-26/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 8-26: Counting occurrences of words using a hash

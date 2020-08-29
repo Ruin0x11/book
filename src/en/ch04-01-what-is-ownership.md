@@ -117,7 +117,7 @@ which it’s declared until the end of the current *scope*. Listing 4-1 has
 comments annotating where the variable `s` is valid.
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-01/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/listing-04-01/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 4-1: A variable and the scope in which it is
@@ -170,7 +170,7 @@ Module Tree”][paths-module-tree]<!-- ignore --> in Chapter 7.
 This kind of string *can* be mutated:
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-01-can-mutate-string/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-01-can-mutate-string/src/main.rs:here}}
 ```
 
 So, what’s the difference here? Why can `String` be mutated but literals
@@ -211,7 +211,7 @@ variable that owns it goes out of scope. Here’s a version of our scope example
 from Listing 4-1 using a `String` instead of a string literal:
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-02-string-scope/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-02-string-scope/src/main.rs:here}}
 ```
 
 There is a natural point at which we can return the memory our `String` needs
@@ -236,7 +236,7 @@ Multiple variables can interact with the same data in different ways in Rust.
 Let’s look at an example using an integer in Listing 4-2.
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-02/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/listing-04-02/src/main.rs:here}}
 ```
 
 <span class="caption">Listing 4-2: Assigning the integer value of variable `x`
@@ -251,7 +251,7 @@ onto the stack.
 Now let’s look at the `String` version:
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-03-string-move/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-03-string-move/src/main.rs:here}}
 ```
 
 This looks very similar to the previous code, so we might assume that the way
@@ -310,14 +310,14 @@ anything when `s1` goes out of scope. Check out what happens when you try to
 use `s1` after `s2` is created; it won’t work:
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-04-cant-use-after-move/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-04-cant-use-after-move/src/main.rs:here}}
 ```
 
 You’ll get an error like this because Rust prevents you from using the
 invalidated reference:
 
 ```console
-{{#include ../listings/ch04-understanding-ownership/no-listing-04-cant-use-after-move/output.txt}}
+{{#include ./listings/ch04-understanding-ownership/no-listing-04-cant-use-after-move/output.txt}}
 ```
 
 If you’ve heard the terms *shallow copy* and *deep copy* while working with
@@ -349,7 +349,7 @@ programming languages, you’ve probably seen them before.
 Here’s an example of the `clone` method in action:
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-05-clone/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-05-clone/src/main.rs:here}}
 ```
 
 This works just fine and explicitly produces the behavior shown in Figure 4-3,
@@ -365,7 +365,7 @@ There’s another wrinkle we haven’t talked about yet. This code using integer
 part of which was shown in Listing 4-2 – works and is valid:
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-06-copy/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-06-copy/src/main.rs:here}}
 ```
 
 But this code seems to contradict what we just learned: we don’t have a call to
@@ -410,7 +410,7 @@ showing where variables go into and out of scope.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-03/src/main.rs}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/listing-04-03/src/main.rs}}
 ```
 
 <span class="caption">Listing 4-3: Functions with ownership and scope
@@ -429,7 +429,7 @@ similar annotations to those in Listing 4-3.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-04/src/main.rs}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/listing-04-04/src/main.rs}}
 ```
 
 <span class="caption">Listing 4-4: Transferring ownership of return
@@ -451,7 +451,7 @@ It’s possible to return multiple values using a tuple, as shown in Listing 4-5
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-05/src/main.rs}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/listing-04-05/src/main.rs}}
 ```
 
 <span class="caption">Listing 4-5: Returning ownership of parameters</span>

@@ -12,7 +12,7 @@ exactly that in our project’s *src/main.rs*.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-08/src/main.rs:all}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/listing-05-08/src/main.rs:all}}
 ```
 
 <span class="caption">Listing 5-8: Calculating the area of a rectangle
@@ -21,7 +21,7 @@ specified by separate width and height variables</span>
 Now, run this program using `cargo run`:
 
 ```console
-{{#include ../listings/ch05-using-structs-to-structure-related-data/listing-05-08/output.txt}}
+{{#include ./listings/ch05-using-structs-to-structure-related-data/listing-05-08/output.txt}}
 ```
 
 Even though Listing 5-8 works and figures out the area of the rectangle by
@@ -32,7 +32,7 @@ rectangle.
 The issue with this code is evident in the signature of `area`:
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-08/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/listing-05-08/src/main.rs:here}}
 ```
 
 The `area` function is supposed to calculate the area of one rectangle, but the
@@ -49,7 +49,7 @@ Listing 5-9 shows another version of our program that uses tuples.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-09/src/main.rs}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/listing-05-09/src/main.rs}}
 ```
 
 <span class="caption">Listing 5-9: Specifying the width and height of the
@@ -77,7 +77,7 @@ parts, as shown in Listing 5-10.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-10/src/main.rs}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/listing-05-10/src/main.rs}}
 ```
 
 <span class="caption">Listing 5-10: Defining a `Rectangle` struct</span>
@@ -111,7 +111,7 @@ work, however.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-11/src/main.rs}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/listing-05-11/src/main.rs}}
 ```
 
 <span class="caption">Listing 5-11: Attempting to print a `Rectangle`
@@ -120,7 +120,7 @@ instance</span>
 When we compile this code, we get an error with this core message:
 
 ```text
-{{#include ../listings/ch05-using-structs-to-structure-related-data/listing-05-11/output.txt:3}}
+{{#include ./listings/ch05-using-structs-to-structure-related-data/listing-05-11/output.txt:3}}
 ```
 
 The `println!` macro can do many kinds of formatting, and by default, the curly
@@ -137,7 +137,7 @@ implementation of `Display`.
 If we continue reading the errors, we’ll find this helpful note:
 
 ```text
-{{#include ../listings/ch05-using-structs-to-structure-related-data/listing-05-11/output.txt:9:10}}
+{{#include ./listings/ch05-using-structs-to-structure-related-data/listing-05-11/output.txt:9:10}}
 ```
 
 Let’s try it! The `println!` macro call will now look like `println!("rect1 is
@@ -149,13 +149,13 @@ see its value while we’re debugging our code.
 Compile the code with this change. Drat! We still get an error:
 
 ```text
-{{#include ../listings/ch05-using-structs-to-structure-related-data/output-only-01-debug/output.txt:3}}
+{{#include ./listings/ch05-using-structs-to-structure-related-data/output-only-01-debug/output.txt:3}}
 ```
 
 But again, the compiler gives us a helpful note:
 
 ```text
-{{#include ../listings/ch05-using-structs-to-structure-related-data/output-only-01-debug/output.txt:9:10}}
+{{#include ./listings/ch05-using-structs-to-structure-related-data/output-only-01-debug/output.txt:9:10}}
 ```
 
 Rust *does* include functionality to print out debugging information, but we
@@ -166,7 +166,7 @@ definition, as shown in Listing 5-12.
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-12/src/main.rs}}
+{{#rustdoc_include ./listings/ch05-using-structs-to-structure-related-data/listing-05-12/src/main.rs}}
 ```
 
 <span class="caption">Listing 5-12: Adding the annotation to derive the `Debug`
@@ -176,7 +176,7 @@ Now when we run the program, we won’t get any errors, and we’ll see the
 following output:
 
 ```console
-{{#include ../listings/ch05-using-structs-to-structure-related-data/listing-05-12/output.txt}}
+{{#include ./listings/ch05-using-structs-to-structure-related-data/listing-05-12/output.txt}}
 ```
 
 Nice! It’s not the prettiest output, but it shows the values of all the fields
@@ -186,7 +186,7 @@ those cases, we can use `{:#?}` instead of `{:?}` in the `println!` string.
 When we use the `{:#?}` style in the example, the output will look like this:
 
 ```console
-{{#include ../listings/ch05-using-structs-to-structure-related-data/output-only-02-pretty-debug/output.txt}}
+{{#include ./listings/ch05-using-structs-to-structure-related-data/output-only-02-pretty-debug/output.txt}}
 ```
 
 Rust has provided a number of traits for us to use with the `derive` annotation

@@ -12,7 +12,7 @@ value:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-07-reference/src/main.rs:all}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-07-reference/src/main.rs:all}}
 ```
 
 First, notice that all the tuple code in the variable declaration and the
@@ -36,7 +36,7 @@ s1`</span>
 Let’s take a closer look at the function call here:
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-07-reference/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-07-reference/src/main.rs:here}}
 ```
 
 The `&s1` syntax lets us create a reference that *refers* to the value of `s1`
@@ -47,7 +47,7 @@ Likewise, the signature of the function uses `&` to indicate that the type of
 the parameter `s` is a reference. Let’s add some explanatory annotations:
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-08-reference-with-annotations/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-08-reference-with-annotations/src/main.rs:here}}
 ```
 
 The scope in which the variable `s` is valid is the same as any function
@@ -66,7 +66,7 @@ Listing 4-6. Spoiler alert: it doesn’t work!
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-06/src/main.rs}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/listing-04-06/src/main.rs}}
 ```
 
 <span class="caption">Listing 4-6: Attempting to modify a borrowed value</span>
@@ -74,7 +74,7 @@ Listing 4-6. Spoiler alert: it doesn’t work!
 Here’s the error:
 
 ```console
-{{#include ../listings/ch04-understanding-ownership/listing-04-06/output.txt}}
+{{#include ./listings/ch04-understanding-ownership/listing-04-06/output.txt}}
 ```
 
 Just as variables are immutable by default, so are references. We’re not
@@ -87,7 +87,7 @@ We can fix the error in the code from Listing 4-6 with just a small tweak:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-09-fixes-listing-04-06/src/main.rs}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-09-fixes-listing-04-06/src/main.rs}}
 ```
 
 First, we had to change `s` to be `mut`. Then we had to create a mutable
@@ -101,13 +101,13 @@ fail:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-10-multiple-mut-not-allowed/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-10-multiple-mut-not-allowed/src/main.rs:here}}
 ```
 
 Here’s the error:
 
 ```console
-{{#include ../listings/ch04-understanding-ownership/no-listing-10-multiple-mut-not-allowed/output.txt}}
+{{#include ./listings/ch04-understanding-ownership/no-listing-10-multiple-mut-not-allowed/output.txt}}
 ```
 
 This restriction allows for mutation but in a very controlled fashion. It’s
@@ -130,20 +130,20 @@ As always, we can use curly brackets to create a new scope, allowing for
 multiple mutable references, just not *simultaneous* ones:
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-11-muts-in-separate-scopes/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-11-muts-in-separate-scopes/src/main.rs:here}}
 ```
 
 A similar rule exists for combining mutable and immutable references. This code
 results in an error:
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-12-immutable-and-mutable-not-allowed/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-12-immutable-and-mutable-not-allowed/src/main.rs:here}}
 ```
 
 Here’s the error:
 
 ```console
-{{#include ../listings/ch04-understanding-ownership/no-listing-12-immutable-and-mutable-not-allowed/output.txt}}
+{{#include ./listings/ch04-understanding-ownership/no-listing-12-immutable-and-mutable-not-allowed/output.txt}}
 ```
 
 Whew! We *also* cannot have a mutable reference while we have an immutable one.
@@ -158,7 +158,7 @@ compile because the last usage of the immutable references occurs before the
 mutable reference is introduced:
 
 ```rust,edition2018
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-13-reference-scope-ends/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-13-reference-scope-ends/src/main.rs:here}}
 ```
 
 The scopes of the immutable references `r1` and `r2` end after the `println!`
@@ -186,13 +186,13 @@ compile-time error:
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-14-dangling-reference/src/main.rs}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-14-dangling-reference/src/main.rs}}
 ```
 
 Here’s the error:
 
 ```console
-{{#include ../listings/ch04-understanding-ownership/no-listing-14-dangling-reference/output.txt}}
+{{#include ./listings/ch04-understanding-ownership/no-listing-14-dangling-reference/output.txt}}
 ```
 
 This error message refers to a feature we haven’t covered yet: lifetimes. We’ll
@@ -210,7 +210,7 @@ Let’s take a closer look at exactly what’s happening at each stage of our
 <span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-15-dangling-reference-annotated/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-15-dangling-reference-annotated/src/main.rs:here}}
 ```
 
 Because `s` is created inside `dangle`, when the code of `dangle` is finished,
@@ -221,7 +221,7 @@ won’t let us do this.
 The solution here is to return the `String` directly:
 
 ```rust
-{{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-16-no-dangle/src/main.rs:here}}
+{{#rustdoc_include ./listings/ch04-understanding-ownership/no-listing-16-no-dangle/src/main.rs:here}}
 ```
 
 This works without any problems. Ownership is moved out, and nothing is

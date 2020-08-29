@@ -10,3 +10,12 @@ git-repository-url = "https://github.com/rust-lang/book"
 
 [language.en]
 name = "English"
+
+[language.ja]
+name = "日本語"
+title = "The Rust Programming Language 日本語版"
+
+[language.fr]
+name = "Français"
+title = "Le langage de programmation Rust"
+author = "Steve Klabnik et Carol Nichols, avec la participation de la Communauté Rust"
